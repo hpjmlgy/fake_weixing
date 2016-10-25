@@ -1,0 +1,98 @@
+#slider {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 419px;
+  border: 1px solid red;
+}
+#slider ul li img {
+  width: 100%;
+  display: blcok;
+  background-size: contain;
+}
+.ad_container {
+  width: 670px;
+  height: 100px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 26px;
+  border: 1px solid red;
+}
+.ad_container a {
+  position: absolute;
+  display: inline-block;
+  top: 34px;
+  right: 30px;
+  width: 20px;
+  height: 32px;
+  background-color: red;
+}
+.ad_container::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  left: 50px;
+  top: 0px;
+  width: 20px;
+  height: 40px;
+  background-color: red;
+}
+.ad_container .content_wrapper {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  font-size: 32px;
+  margin-top: 26px;
+  width: 70%;
+}
+.ad_container .content_wrapper div {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+.ad_container .content_wrapper div::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.ad_container .content_wrapper div p {
+  display: inline;
+  color: #999999;
+}
+.ad_container .content_wrapper div .divider {
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 1px;
+  background-color: #999999;
+  margin: 0 10px;
+}
+.ad_container .content_wrapper div .divider::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.ad_container .content_wrapper div p:nth-child(1) {
+  color: red;
+}
+.mt20 {
+  margin-top: 20px;
+}
+#flex_container {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  column-count: 2;
+  column-width: auto;
+  column-gap: 0em;
+  padding: 10px;
+}
+#flex_container .item {
+  padding: 15px;
+  border: 1px solid grey;
+  break-inside: avoid;
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>React Transform Boilerplate</title>
+    <script src="/public/js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="/public/js/vendor/unslider-min.js"></script>
+    <!-- <script src="/public/js/vendor/semantic.min.js"></script> -->
+    <script src="/public/js/vendor/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="/public/css/normalize.css">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <!-- <link rel="stylesheet" href="/public/css/semantic/semantic.min.css"> -->
+    <link rel="stylesheet" href="/public/css/unslider/unslider.css">
+    <link rel="stylesheet" href="/public/css/unslider/unslider-dots.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+
+<body>
+<div id="wrap_slider"></div>
+<div id="wrap_ad1"></div>
+<div id="wrap_ad2"></div>
+
+
+    <!-- 	<section class="grey"></section>
+
+	<div class="ui grid">
+		<div class="centered row margintop f12 " style="color:red">我们的产品</div>
+	</div>
+
+	<div class="ui grid" id="flex_container">
+		<div class="item">
+			<h4 class="ui header">
+				<div class="content">时尚杂志册</div>
+			</h4>
+			<a class="ui red label">35元起订</a>
+			<img class="image margintop display_block" src="/public/img/1.jpg"></div>
+		<div class="item">
+			<h4 class="ui header">
+				<div class="content">时尚杂志册</div>
+			</h4>
+			<a class="ui red label">35元起订</a>
+			<img class="image margintop display_block" src="/public/img/1.jpg"></div>
+		<div  class="item">
+			<h4 class="ui header">
+				<div class="content">时尚杂志册</div>
+			</h4>
+			<a class="ui red label">35元起订</a>
+			<img class="image margintop display_block" src="/public/img/1.jpg"></div>
+		<div  class="item" >
+			<h4 class="ui header">
+				<div class="content">时尚杂志册</div>
+			</h4>
+			<a class="ui red label">35元起订</a>
+			<img class="image margintop display_block" src="/public/img/1.jpg"></div>
+		<div  class="item"  >
+			<h4 class="ui header">
+				<div class="content">炫彩冲印</div>
+			</h4>
+			<p>13种尺寸任选  真彩还原  健康环保</p>
+			<p>传统冲印工艺  进口相纸  长久保存</p>
+			<p style="color:red;font-size: 18px;">0.3元起/张</p>
+			<img class="image margintop" src="/public/img/2.jpg"></div>
+		<div   class="item"  >
+			<h4 class="ui header">
+				<div class="content">炫彩冲印</div>
+			</h4>
+			<p>13种尺寸任选  真彩还原  健康环保</p>
+			<p>传统冲印工艺  进口相纸  长久保存</p>
+			<p style="color:red;font-size: 18px;">0.3元起/张</p>
+			<img class="image margintop" src="/public/img/2.jpg"></div>
+		<div   class="item"   >
+			<h4 class="ui header">
+				<div class="content">炫彩冲印</div>
+			</h4>
+			<p>13种尺寸任选  真彩还原  健康环保</p>
+			<p>传统冲印工艺  进口相纸  长久保存</p>
+			<p style="color:red;font-size: 18px;">0.3元起/张</p>
+			<img class="image margintop" src="/public/img/2.jpg"></div>
+	</div> -->
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#slider').unslider({
+        autoplay: true,
+        infinite: true,
+        arrows: false,
+        speed: 1200
+    });
+    $('.item').on('tap', function(event) {
+        event.preventDefault();
+        console.log("tap!")
+            /* Act on the event */
+    });
+
+
+})
+</script>
+<script src="/dist/bundle.js"></script>
+
+</html>
