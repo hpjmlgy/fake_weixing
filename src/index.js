@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom'
 import Slider from './module/Slider'
 import Top_ad from './module/Top_ad'
 import Top_ad2 from './module/Top_ad2'
+import Product from './module/Product'
 
 ReactDOM.render(
 	<Slider data={[{src:"/public/img/test_logo.jpg"},{src:"/public/img/test_logo.jpg"},{src:"/public/img/test_logo.jpg"}]}/>,
