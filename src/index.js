@@ -20,3 +20,7 @@ ReactDOM.render(
 	<Top_ad2 desc={"免费领取"} desc1={"30元制作代金卷"}/>,
 	document.getElementById('wrap_ad2')
 );
+ReactDOM.render(
+	<Product  litems={[{id:"1"},{id:"2"},{id:"3"},{id:"4"}]} ritems={[{id:"1"},{id:"2"},{id:"3"}]} />,
+	document.getElementById('wrap_cargo')
+); //

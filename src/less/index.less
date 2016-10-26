@@ -3,8 +3,8 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    max-width: 750px;
     height: 419px;
-    border: 1px solid red;
     ul {
         li {
             img {
@@ -27,10 +27,10 @@
     a {
         position: absolute;
         display: inline-block;
-        top:34px;
-        right:30px;
-        width:20px;
-        height:32px;
+        top: 34px;
+        right: 30px;
+        width: 20px;
+        height: 32px;
         background-color: red;
     }
     &::after {
@@ -92,36 +92,136 @@
     margin-top: 20px;
 }
 
-.grey{
-	display: block;
-	position: relative;
-	height: 20px;
-	width: 100%;
-	margin-top: 26px;
-	background-color: #cccccc;
+.grey {
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 100%;
+    margin-top: 26px;
+    background-color: #cccccc;
 }
 
-.title_cargo{
-	display: block;
-	font-size: 30px;
-	color:red;
-	width:150px;
-	margin:0 auto;
-	margin-top: 25px;
+.title_cargo {
+    display: block;
+    font-size: 30px;
+    color: red;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 25px;
 }
 
-// #flex_container {
-//     display: block;
-//     width: 90%;
-//     margin: 0 auto;
-//     margin-top: 20px;
-//     column-count: 2;
-//     column-width: auto;
-//     column-gap: 0em;
-//     padding: 10px;
-//     .item {
-//         padding: 15px;
-//         border: 1px solid grey;
-//         break-inside: avoid;
-//     }
-// }
+#wrap_cargo {
+    margin-top: 25px;
+    width: 100%;
+    max-width: 750px;
+    position: relative;
+}
+
+.litem {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    width: 50%;
+    max-width: 375px;
+    height: 370px;
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+    &::after {
+        //父容器位置
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+    p {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        font-size: 34px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    a {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        vertical-align: middle;
+        font-size: 32px;
+        height: 34px;
+        width: 142px;
+        border-radius: 10px;
+        border: 1px solid #e52e04;
+        background-color: #e52e04;
+        text-align: center;
+        margin-top: 10px;
+        padding-bottom: 5px;
+        &::before {
+            //当前容器位置
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+    }
+    img {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+}
+
+#litem1,
+#litem2,
+#litem3,
+#litem4 {
+    color: white;
+}
+
+.ritem {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    width: 50%;
+    max-width: 375px;
+    height: 500px;
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+    p:nth-child(1) {
+        font-size: 36px;
+        display: block;
+        font-weight: bolder;
+        position: relative;
+        margin-left: 50px;
+    }
+    p:nth-child(2) {
+        margin-top: 16px;
+    }
+    p:nth-child(2),
+    p:nth-child(3) {
+        font-size: 18px;
+        display: block;
+        position: relative;
+        margin-left: 50px;
+        color: grey;
+    }
+    p:nth-child(4) {
+        margin-top: 18px;
+        margin-left: 50px;
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        color: red;
+        font-weight: bolder;
+    }
+    p:nth-child(5) {
+        display: inline-block;
+        position: relative;
+        font-size: 22px;
+        color: red;
+    }
+    img {
+        display: block;
+        position: relative;
+        margin-left: 50px;
+    }
+}

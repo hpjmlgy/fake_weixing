@@ -3,8 +3,8 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-width: 750px;
   height: 419px;
-  border: 1px solid red;
 }
 #slider ul li img {
   width: 100%;
@@ -96,4 +96,114 @@
   width: 150px;
   margin: 0 auto;
   margin-top: 25px;
+}
+#wrap_cargo {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 750px;
+  position: relative;
+}
+.litem {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  width: 50%;
+  max-width: 375px;
+  height: 370px;
+  border-top: 1px solid grey;
+  border-right: 1px solid grey;
+}
+.litem::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.litem p {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  font-size: 34px;
+  text-align: center;
+  margin-top: 30px;
+}
+.litem a {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  vertical-align: middle;
+  font-size: 32px;
+  height: 34px;
+  width: 142px;
+  border-radius: 10px;
+  border: 1px solid #e52e04;
+  background-color: #e52e04;
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 5px;
+}
+.litem a::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.litem img {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+#litem1,
+#litem2,
+#litem3,
+#litem4 {
+  color: white;
+}
+.ritem {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  width: 50%;
+  max-width: 375px;
+  height: 500px;
+  border-top: 1px solid grey;
+  border-right: 1px solid grey;
+}
+.ritem p:nth-child(1) {
+  font-size: 36px;
+  display: block;
+  font-weight: bolder;
+  position: relative;
+  margin-left: 50px;
+}
+.ritem p:nth-child(2) {
+  margin-top: 16px;
+}
+.ritem p:nth-child(2),
+.ritem p:nth-child(3) {
+  font-size: 18px;
+  display: block;
+  position: relative;
+  margin-left: 50px;
+  color: grey;
+}
+.ritem p:nth-child(4) {
+  margin-top: 18px;
+  margin-left: 50px;
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  color: red;
+  font-weight: bolder;
+}
+.ritem p:nth-child(5) {
+  display: inline-block;
+  position: relative;
+  font-size: 22px;
+  color: red;
+}
+.ritem img {
+  display: block;
+  position: relative;
+  margin-left: 50px;
 }
