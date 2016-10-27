@@ -42,10 +42,10 @@ var Product = React.createClass({
 
 
         return (
-            <div className="product_container">
+            <section className="product_container">
                 {product_litems}
                 {product_ritems}
-            </div>
+            </section>
         )
     }
 });
