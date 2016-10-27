@@ -99,6 +99,7 @@
 }
 #wrap_cargo {
   display: block;
+  margin: 0 auto;
   margin-top: 25px;
   width: 100%;
   max-width: 750px;
@@ -175,7 +176,6 @@
   max-width: 375px;
   height: 500px;
   border-top: 1px solid grey;
-  border-right: 1px solid grey;
 }
 .ritem p:nth-child(1) {
   font-size: 36px;
@@ -223,6 +223,7 @@
   max-width: 750px;
   min-width: 710px;
   background-color: #eeeeee;
+  margin: 0 auto;
 }
 #wrap_cargo,
 #wrap_ad3 {
@@ -263,5 +264,42 @@
   margin-top: 4px;
   display: block;
   color: #999999;
+  font-size: 26px;
+}
+#nav_wrapper {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 97%;
+}
+#nav_wrapper .nav_item_wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  width: 100%;
+}
+#nav_wrapper .nav_item_wrapper a {
+  text-decoration: none;
+  background-color: #fff;
+  flex-basis: 170px;
+  height: 70px;
+  font-size: 18px;
+  color: #999999;
+  border: 1px solid #999999;
+  text-align: center;
+}
+#nav_wrapper .nav_item_wrapper a div {
+  margin-top: 8px;
+}
+#nav_wrapper .nav_item_wrapper a div p {
+  margin: 0;
+  display: inline-block;
+}
+#nav_wrapper .nav_item_wrapper a div p:nth-child(1) {
+  letter-spacing: 5px;
   font-size: 26px;
 }

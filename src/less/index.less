@@ -112,6 +112,7 @@
 
 #wrap_cargo {
     display: block;
+    margin: 0 auto;
     margin-top: 25px;
     width: 100%;
     max-width: 750px;
@@ -194,7 +195,6 @@
     max-width: 375px;
     height: 500px;
     border-top: 1px solid grey;
-    border-right: 1px solid grey;
     p:nth-child(1) {
         font-size: 36px;
         display: block;
@@ -243,6 +243,7 @@
     max-width: 750px;
     min-width: 710px;
     background-color: #eeeeee;
+    margin: 0 auto;
 }
 
 #wrap_cargo,
@@ -261,8 +262,8 @@
         display: block;
         position: relative;
         .mid_content_wrapper {
-        	display: block;
-        	position: relative;
+            display: block;
+            position: relative;
             div {
                 width: 100%;
                 display: inline-block;
@@ -270,19 +271,57 @@
                 text-align: center;
                 font-weight: bolder;
                 p:nth-child(1) {
-
-                	margin: 0;
-                	margin-top: 35px;
+                    margin: 0;
+                    margin-top: 35px;
                     display: block;
                     color: #e52e04;
                     font-size: 30px;
                 }
                 p:nth-child(2) {
-                	
-                	margin: 0;
-                	margin-top: 4px;
+                    margin: 0;
+                    margin-top: 4px;
                     display: block;
                     color: #999999;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}
+
+#nav_wrapper {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 97%;
+    .nav_item_wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        //定义主轴间隔
+        align-content: center;
+        position: relative;
+        width: 100%;
+        a {
+            // width:170px;
+            text-decoration: none;
+            background-color: #fff;
+            flex-basis: 170px;
+            height: 70px;
+            font-size: 18px;
+            color: #999999;
+            border: 1px solid #999999;
+            text-align: center;
+            div {
+                margin-top: 8px;
+                p {
+                    margin: 0;
+                    display: inline-block;
+                }
+                p:nth-child(1) {
+                    letter-spacing: 5px;
                     font-size: 26px;
                 }
             }
