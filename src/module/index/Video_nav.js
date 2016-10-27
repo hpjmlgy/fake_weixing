@@ -10,7 +10,7 @@ var Video_nav = React.createClass({
     })
     return (
       <div className={"video_item_wrapper"}>
-         <div>this.props.title</div>
+         <p>{this.props.title}</p>
          {video_items}
       </div>
     )
