@@ -1,3 +1,8 @@
+#wrap_slider {
+  display: block;
+  margin: 0 auto;
+  max-width: 750px;
+}
 #slider {
   display: block;
   position: relative;
@@ -84,8 +89,10 @@
 .grey {
   display: block;
   position: relative;
+  margin: 0 auto;
   height: 20px;
   width: 100%;
+  max-width: 750px;
   margin-top: 26px;
   background-color: #cccccc;
 }
@@ -316,4 +323,38 @@
   font-size: 28px;
   color: #666;
   text-align: center;
+}
+#video_wrapper .video_item_wrapper .video_control_wrapper {
+  display: block;
+  margin-top: 20px;
+  width: 750px;
+  overflow: hidden;
+  height: 380px;
+}
+#video_wrapper .video_item_wrapper .video_control_wrapper .whole {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 1950px;
+  background-color: #eeeeee;
+  transition: margin 1s ease 0s;
+}
+#video_wrapper .video_item_wrapper .video_control_wrapper .whole div {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  height: 380px;
+  width: 560px;
+}
+#video_wrapper .video_item_wrapper .video_control_wrapper .whole div:nth-child(1) {
+  left: 95px;
+  background-color: grey;
+}
+#video_wrapper .video_item_wrapper .video_control_wrapper .whole div:nth-child(2) {
+  left: 695px;
+  background-color: red;
+}
+#video_wrapper .video_item_wrapper .video_control_wrapper .whole div:nth-child(3) {
+  left: 1295px;
+  background-color: green;
 }
