@@ -12,7 +12,7 @@ var Middle_story = React.createClass({
              <a href={this.props.story.url}>{this.props.story.desc}</a>
         </div>
         <div className="activity">
-              <head>{this.props.act.title}</head>
+              <header>{this.props.act.title}</header>
                <p>{this.props.act.level1}</p>
                <p>{this.props.act.level2}</p>
                <p>{this.props.act.level3}</p>

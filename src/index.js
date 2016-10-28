@@ -10,6 +10,8 @@ import Top_ad3 from './module/index/Top_ad3'
 import Nav_mid from './module/index/Nav_mid'
 import Video_nav from './module/index/Video_nav'
 import Middle_story from './module/index/Middle_story'
+import Blog from './module/index/Blog'
+import Nav_bottom from './module/index/Nav_bottom'
 
 ReactDOM.render(
 	<Slider data={[{src:"/public/img/test_logo.jpg"},{src:"/public/img/test_logo.jpg"},{src:"/public/img/test_logo.jpg"}]}/>,
@@ -41,6 +43,14 @@ ReactDOM.render(
 	document.getElementById('video_wrapper')
 );
 ReactDOM.render(
-	<Middle_story story={{title:"照片背后的故事",url:"#",desc:"更多的故事>>"}} act={{title:"活动内容：",level1:"一等奖: 10名, 奖品时光绘终身水晶卡用户, 全系产品尊享8折.",level2:"一等奖: 10名, 奖品时光绘终身水晶卡用户, 全系产品尊享8折.",level3:"一等奖: 10名, 奖品时光绘终身水晶卡用户, 全系产品尊享8折.",level4:"一等奖: 10名, 奖品时光绘终身水晶卡用户, 全系产品尊享8折."}} />,
+	<Middle_story story={{title:"照片背后的故事",url:"#",desc:"更多故事>>"}} act={{title:"活动内容：",level1:"一等奖: 10名, 奖品时光绘终身水晶卡用户, 全系产品尊享8折.",level2:"一等奖: 10名, 奖品时光绘终身水晶卡用户, 全系产品尊享8折.",level3:"一等奖: 10名, 奖品时光绘终身水晶卡用户, 全系产品尊享8折.",level4:"一等奖: 10名, 奖品时光绘终身水晶卡用户, 全系产品尊享8折."}} />,
 	document.getElementById('story_wrapper')
+);
+ReactDOM.render(
+	<Blog/>,
+	document.getElementById('blog_wrapper')
+);
+ReactDOM.render(
+	<Nav_bottom/>,
+	document.getElementById('nav_bottom_wrapper')
 );

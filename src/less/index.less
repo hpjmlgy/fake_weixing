@@ -2,6 +2,7 @@
     display: block;
     margin: 0 auto;
     max-width: 750px;
+    min-width: 750px;
 }
 
 #slider {
@@ -246,7 +247,8 @@
 .middle_zone {
     display: block;
     position: relative;
-    height: 620px;
+    // height: 620px;
+    height: 1300px;
     width: 100%;
     max-width: 750px;
     min-width: 710px;
@@ -363,7 +365,7 @@
                 height: 100%;
                 width: 1950px;
                 background-color: #eeeeee;
-                transition:margin 1s ease 0s;
+                transition: margin 1s ease 0s;
                 div {
                     display: inline-block;
                     position: absolute;
@@ -384,6 +386,211 @@
                     background-color: green;
                 }
             }
+        }
+    }
+}
+
+#story_wrapper {
+    display: block;
+    max-width: 750px;
+    .story_pic {
+        display: block;
+        position: relative;
+        margin-top: 40px;
+        width: 100%;
+        max-width: 750px;
+        height: 200px;
+        background-color: green;
+    }
+    .story_name {
+        display: block;
+        width: 100%;
+        position: relative;
+        height: 80px;
+        background-color: white;
+        p {
+            display: block;
+            font-size: 30px;
+            text-align: center;
+            color: #e52e04;
+            padding-top: 25px;
+            font-weight: bolder;
+        }
+        a {
+            position: absolute;
+            text-decoration: none;
+            outline: none;
+            top: 27px;
+            right: 20px;
+            font-size: 26px;
+            color: black;
+        }
+    }
+    .activity {
+        display: block;
+        position: relative;
+        height: 240px;
+        width: 100%;
+        header {
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+            font-size: 26px;
+            width: 90%;
+        }
+        p {
+            display: block;
+            margin: 0 auto;
+            font-size: 22px;
+            margin-top: 4px;
+            width: 90%;
+        }
+    }
+}
+
+#blog_wrapper {
+    max-width: 750px;
+    min-width: 710px;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #eee;
+    div {
+        display: block;
+        position: relative;
+        width: 95%;
+        margin: 0 auto;
+        background-color: white;
+        .blog_head_wrapper {
+            display: block;
+            position: relative;
+            width: 670px;
+            height: 140px;
+            border-bottom: 2px solid #eee;
+            .icon {
+                display: inline-block;
+                float: left;
+                margin-left: 40px;
+                margin-top: 20px;
+                height: 100px;
+                width: 100px;
+                background-color: red;
+                border-radius: 50px;
+                border-color: red;
+            }
+            .info {
+                display: inline-block;
+                width: 150px;
+                float: left;
+                margin-left: 15px;
+                margin-top: 30px;
+                font-size: 28px;
+                color: #cccccc;
+                p {
+                    margin: 0;
+                    display: inline-block;
+                }
+            }
+            .ricon {
+                display: inline-block;
+                float: right;
+                margin-right: 40px;
+                margin-top: 46px;
+                height: 48px;
+                width: 96px;
+                border-radius: 20px;
+                border: 2px solid red;
+                &::before {
+                    display: inline-block;
+                    content: "";
+                    position: absolute;
+                    top: 15px;
+                    left: 20px;
+                    background-color: red;
+                    width: 20px;
+                    height: 20px;
+                }
+                &::after {
+                    display: inline-block;
+                    content: "";
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                    background-color: red;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        .blog_photo {
+            display: block;
+            margin-top: 20px;
+            width: 670px;
+            height: 380px;
+            background-color: red;
+        }
+        .message {
+            display: block;
+            margin-top: 24px;
+            width: 670px;
+            font-weight: bolder;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eeeeee;
+        }
+        .blog_button_wrapper {
+            display: flex;
+            position: relative;
+            width: 670px;
+            justify-content: space-between;
+            align-items: center;
+            button {
+                font-size: 30px;
+                width: 228px;
+                background-color: transparent;
+                border-color: #e52e04;
+                a {
+                    text-decoration: none;
+                    outline: none;
+                    color: black;
+                }
+            }
+            button:nth-child(2n+1) {
+                width: 205px;
+            }
+        }
+    }
+}
+
+#nav_bottom_wrapper {
+    width: 100%;
+    max-width: 750px;
+    min-width: 750px;
+    margin-top: 20px;
+    margin: 0 auto;
+    display: block;
+    background-color: #eee;
+    div {
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+        width: 750px;
+        justify-content: space-between;
+        align-items: center;
+        button {
+            font-size: 36px;
+            width: 350px;
+            height: 88px;
+            border: 0 1px solid grey;
+            border-radius: 0px;
+            background-color: #333;
+            a {
+                text-decoration: none;
+                outline: none;
+                color: white;
+            }
+        }
+        button:nth-child(2n+1) {
+            width: 200px;
         }
     }
 }

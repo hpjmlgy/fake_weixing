@@ -2,6 +2,7 @@
   display: block;
   margin: 0 auto;
   max-width: 750px;
+  min-width: 750px;
 }
 #slider {
   display: block;
@@ -225,7 +226,7 @@
 .middle_zone {
   display: block;
   position: relative;
-  height: 620px;
+  height: 1300px;
   width: 100%;
   max-width: 750px;
   min-width: 710px;
@@ -357,4 +358,206 @@
 #video_wrapper .video_item_wrapper .video_control_wrapper .whole div:nth-child(3) {
   left: 1295px;
   background-color: green;
+}
+#story_wrapper {
+  display: block;
+  max-width: 750px;
+}
+#story_wrapper .story_pic {
+  display: block;
+  position: relative;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 750px;
+  height: 200px;
+  background-color: green;
+}
+#story_wrapper .story_name {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 80px;
+  background-color: white;
+}
+#story_wrapper .story_name p {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+  color: #e52e04;
+  padding-top: 25px;
+  font-weight: bolder;
+}
+#story_wrapper .story_name a {
+  position: absolute;
+  text-decoration: none;
+  outline: none;
+  top: 27px;
+  right: 20px;
+  font-size: 26px;
+  color: black;
+}
+#story_wrapper .activity {
+  display: block;
+  position: relative;
+  height: 240px;
+  width: 100%;
+}
+#story_wrapper .activity header {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 26px;
+  width: 90%;
+}
+#story_wrapper .activity p {
+  display: block;
+  margin: 0 auto;
+  font-size: 22px;
+  margin-top: 4px;
+  width: 90%;
+}
+#blog_wrapper {
+  max-width: 750px;
+  min-width: 710px;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #eee;
+}
+#blog_wrapper div {
+  display: block;
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  background-color: white;
+}
+#blog_wrapper div .blog_head_wrapper {
+  display: block;
+  position: relative;
+  width: 670px;
+  height: 140px;
+  border-bottom: 2px solid #eee;
+}
+#blog_wrapper div .blog_head_wrapper .icon {
+  display: inline-block;
+  float: left;
+  margin-left: 40px;
+  margin-top: 20px;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  border-radius: 50px;
+  border-color: red;
+}
+#blog_wrapper div .blog_head_wrapper .info {
+  display: inline-block;
+  width: 150px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 30px;
+  font-size: 28px;
+  color: #cccccc;
+}
+#blog_wrapper div .blog_head_wrapper .info p {
+  margin: 0;
+  display: inline-block;
+}
+#blog_wrapper div .blog_head_wrapper .ricon {
+  display: inline-block;
+  float: right;
+  margin-right: 40px;
+  margin-top: 46px;
+  height: 48px;
+  width: 96px;
+  border-radius: 20px;
+  border: 2px solid red;
+}
+#blog_wrapper div .blog_head_wrapper .ricon::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+}
+#blog_wrapper div .blog_head_wrapper .ricon::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+}
+#blog_wrapper div .blog_photo {
+  display: block;
+  margin-top: 20px;
+  width: 670px;
+  height: 380px;
+  background-color: red;
+}
+#blog_wrapper div .message {
+  display: block;
+  margin-top: 24px;
+  width: 670px;
+  font-weight: bolder;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eeeeee;
+}
+#blog_wrapper div .blog_button_wrapper {
+  display: flex;
+  position: relative;
+  width: 670px;
+  justify-content: space-between;
+  align-items: center;
+}
+#blog_wrapper div .blog_button_wrapper button {
+  font-size: 30px;
+  width: 228px;
+  background-color: transparent;
+  border-color: #e52e04;
+}
+#blog_wrapper div .blog_button_wrapper button a {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+#blog_wrapper div .blog_button_wrapper button:nth-child(2n+1) {
+  width: 205px;
+}
+#nav_bottom_wrapper {
+  width: 100%;
+  max-width: 750px;
+  min-width: 750px;
+  margin-top: 20px;
+  margin: 0 auto;
+  display: block;
+  background-color: #eee;
+}
+#nav_bottom_wrapper div {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  width: 750px;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav_bottom_wrapper div button {
+  font-size: 36px;
+  width: 350px;
+  height: 88px;
+  border: 0 1px solid grey;
+  border-radius: 0px;
+  background-color: #333;
+}
+#nav_bottom_wrapper div button a {
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+#nav_bottom_wrapper div button:nth-child(2n+1) {
+  width: 200px;
 }
