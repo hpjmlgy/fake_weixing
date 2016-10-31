@@ -1,0 +1,54 @@
+#xzcp_wrapper {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 710px;
+}
+#xzcp_wrapper .items_all_wrapper {
+  display: block;
+  width: 100%;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper {
+  display: block;
+  width: 100%;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_top_wrapper {
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  height: 136px;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_top_wrapper div:nth-child(1) {
+  width: 30px;
+  border-bottom: 1px solid grey;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_top_wrapper .name {
+  height: 60px;
+  width: 210px;
+  background-color: black;
+  position: relative;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_top_wrapper .name span {
+  display: block;
+  font-size: 30px;
+  color: white;
+  margin-top: 10px;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_top_wrapper .desc {
+  font-size: 30px;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_top_wrapper div:nth-child(4) {
+  width: 230px;
+  border-bottom: 1px solid grey;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_middle_wrapper {
+  display: block;
+  position: relative;
+  width: 710px;
+  height: 300px;
+}

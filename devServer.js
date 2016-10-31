@@ -27,6 +27,9 @@ app.get('/tg', function(req, res) {
 app.get('/tg_all', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/tg_all.html'));
 });
+app.get('/xzcp', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/xzcp.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);

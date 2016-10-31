@@ -15,7 +15,8 @@ module.exports = {
     index: './src/index',
     mbck: './src/mbck',
     tg: './src/tg',
-    tg_all: './src/tg_all'
+    tg_all: './src/tg_all',
+    xzcp: './src/xzcp'
   },
 
   output: {

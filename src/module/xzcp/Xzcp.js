@@ -4,8 +4,7 @@ var $ = require('jquery');
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
-var Tg_item = React.createClass({
-
+var Xzcp = React.createClass({
   getInitialState: function() {
     return null;
   },
@@ -17,35 +16,28 @@ var Tg_item = React.createClass({
   },
   render: function() {
     var o = this;
-    var tg_items = this.props.items.map(function(elem) {
+    var products = this.props.products.map(function(elem) {
       return (
-
-        <div>
+        <div className="item_wrapper">
          <section className="item_top_wrapper">
-              <div className="icon"></div>
-              <div className="info_wrapper">
-                 <p>投稿人:{elem.name}</p>
-                 <p>票  数：{elem.score}票</p>
-              </div>         
+              <div></div>
+              <div className="name"><span>{elem.name}</span></div>
+              <div className="desc">{elem.desc}</div>
+              <div></div>       
          </section>
          <section className="item_middle_wrapper">
-              <img className="photo" src="" alt=""/>
-              <p className="desc">{elem.desc}</p>
+ 
          </section>
          <section className="item_bottom_wrapper">
-            <button className="admire">{elem.admire}</button>
-            <button className="invite_friend">邀请好友投票</button>
+
          </section>
         </div>
       )
-
     });
 
     return (
-      <div>
-    {
-      tg_items
-    }
+      <div className="items_all_wrapper">
+      {products}
       </div>
     )
   }
@@ -55,4 +47,4 @@ var Tg_item = React.createClass({
 })
 
 
-export default Tg_item;
+export default Xzcp;

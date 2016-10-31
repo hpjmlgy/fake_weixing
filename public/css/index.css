@@ -69,11 +69,11 @@
 }
 .ad_container .content_wrapper div .divider {
   display: inline-block;
-  vertical-align: middle;
   height: 30px;
   width: 1px;
   background-color: #999999;
   margin: 0 10px;
+  vertical-align: middle;
 }
 .ad_container .content_wrapper div .divider::before {
   content: '';
