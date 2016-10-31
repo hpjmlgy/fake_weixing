@@ -1,6 +1,7 @@
 #tg_wrapper {
   display: block;
   position: relative;
+  margin: 0 auto;
   width: 750px;
 }
 #tg_wrapper div .fileload_wrapper {

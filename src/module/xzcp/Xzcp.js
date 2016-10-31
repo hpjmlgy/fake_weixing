@@ -14,11 +14,17 @@ var Xzcp = React.createClass({
   handleChange: function(e) {
 
   },
+  handleTap: function(e) {
+
+  },
   render: function() {
     var o = this;
     var products = this.props.products.map(function(elem) {
-      return (
-        <div className="item_wrapper">
+      if (elem.desc != undefined) {
+
+
+        return (
+          <div className="item_wrapper">
          <section className="item_top_wrapper">
               <div></div>
               <div className="name"><span>{elem.name}</span></div>
@@ -26,13 +32,36 @@ var Xzcp = React.createClass({
               <div></div>       
          </section>
          <section className="item_middle_wrapper">
- 
+            <div>
+            <a href="" onTouchTap={o.handleTap}>查看详情</a>
+            </div>
          </section>
          <section className="item_bottom_wrapper">
-
+              <p>{elem.words}</p>
+              <span>{elem.special}</span>
          </section>
         </div>
-      )
+        )
+      } else {
+        return (
+          <div className="item_wrapper">
+         <section className="item_top_wrapper">
+              <div></div>
+              <div className="name"><span>{elem.name}</span></div>
+              <div className="divider"></div>       
+         </section>
+         <section className="item_middle_wrapper">
+            <div>
+            <a href="" onTouchTap={o.handleTap}>查看详情</a>
+            </div>
+         </section>
+         <section className="item_bottom_wrapper">
+              <p>{elem.words}</p>
+              <span className="black">{elem.special}</span>
+         </section>
+        </div>
+        )
+      }
     });
 
     return (

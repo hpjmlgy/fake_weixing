@@ -1,0 +1,183 @@
+#mb_wrapper {
+  background-color: white;
+  display: block;
+  position: relative;
+  width: 750px;
+  height: 100%;
+  margin: 0 auto;
+}
+#mb_wrapper .mb_item_wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+#mb_wrapper .mb_item_wrapper .introduce {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background-color: white;
+  text-align: center;
+}
+#mb_wrapper .mb_item_wrapper .introduce::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+#mb_wrapper .mb_item_wrapper .introduce .type_title {
+  display: inline-block;
+  font-size: 30px;
+  overflow: hidden;
+  vertical-align: middle;
+  color: #ccc;
+}
+#mb_wrapper .mb_item_wrapper .introduce .next {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 1px solid #e52e04;
+  line-height: 5px;
+  color: #e52e04;
+  text-align: center;
+  background-color: white;
+}
+#mb_wrapper .mb_item_wrapper .nav_wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  background-color: #666;
+}
+#mb_wrapper .mb_item_wrapper .nav_wrapper .title {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  color: white;
+}
+#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  width: 750px;
+  overflow: hidden;
+  height: 380px;
+}
+#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper .whole {
+  display: block;
+  position: relative;
+  height: 100%;
+  background-color: #666;
+  transition: margin 1s ease 0s;
+}
+#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper .whole div {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  height: 390px;
+  width: 570px;
+  background-color: white;
+}
+#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper .whole div img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+#mb_wrapper .mb_item_wrapper .size_wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  margin-top: 30px;
+}
+#mb_wrapper .mb_item_wrapper .size_wrapper .size_title {
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+}
+#mb_wrapper .mb_item_wrapper .size_wrapper .size_items_wrapper {
+  display: flex;
+  width: 670px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+#mb_wrapper .mb_item_wrapper .size_wrapper .size_items_wrapper div {
+  margin-top: 10px;
+  width: 210px;
+  height: 82px;
+  border: 1px solid grey;
+  font-size: 30px;
+  text-align: center;
+  line-height: 82px;
+}
+#mb_wrapper .mb_item_wrapper .paper_num_wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  margin-top: 40px;
+  border-bottom: 1px solid #ccc;
+}
+#mb_wrapper .mb_item_wrapper .paper_num_wrapper .paper_num_title {
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+}
+#mb_wrapper .mb_item_wrapper .paper_num_wrapper .paper_num_items_wrapper {
+  display: flex;
+  width: 670px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+  text-align: center;
+}
+#mb_wrapper .mb_item_wrapper .paper_num_wrapper .paper_num_items_wrapper div {
+  margin-top: 10px;
+  width: 142px;
+  height: 82px;
+  border: 1px solid grey;
+  font-size: 30px;
+  text-align: center;
+  line-height: 82px;
+}
+#mb_wrapper .mb_item_wrapper .price_wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 88px;
+}
+#mb_wrapper .mb_item_wrapper .price_wrapper .price_items_wrapper {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#mb_wrapper .mb_item_wrapper .price_wrapper .price_items_wrapper span {
+  font-size: 30px;
+  text-align: center;
+  line-height: 88px;
+}
+#mb_wrapper .mb_item_wrapper .price_wrapper .price_items_wrapper span:nth-child(2) {
+  color: #e52e04;
+}

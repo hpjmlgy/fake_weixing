@@ -4,7 +4,11 @@
   margin: 0 auto;
   width: 710px;
 }
+#xzcp_wrapper .items_all_wrapper:nth-child(1) {
+  margin-top: 0px;
+}
 #xzcp_wrapper .items_all_wrapper {
+  margin-top: 42px;
   display: block;
   width: 100%;
 }
@@ -42,13 +46,79 @@
 #xzcp_wrapper .items_all_wrapper .item_wrapper .item_top_wrapper .desc {
   font-size: 30px;
 }
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_top_wrapper .divider {
+  width: 430px;
+  border-bottom: 1px solid grey;
+}
 #xzcp_wrapper .items_all_wrapper .item_wrapper .item_top_wrapper div:nth-child(4) {
   width: 230px;
   border-bottom: 1px solid grey;
 }
 #xzcp_wrapper .items_all_wrapper .item_wrapper .item_middle_wrapper {
   display: block;
-  position: relative;
   width: 710px;
   height: 300px;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_middle_wrapper div {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_middle_wrapper div::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_middle_wrapper div a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  max-width: 99%;
+  height: 56px;
+  font-size: 26px;
+  border-radius: 25px;
+  line-height: 56px;
+  background-color: red;
+  vertical-align: middle;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_middle_wrapper div a::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 20px;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_bottom_wrapper {
+  display: block;
+  width: 710px;
+  margin: 0 auto;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_bottom_wrapper p,
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_bottom_wrapper span {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  font-size: 28px;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_bottom_wrapper p {
+  display: block;
+  margin: 0;
+  margin: 0 auto;
+  margin-top: 26px;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_bottom_wrapper span {
+  color: #e52e04;
+}
+#xzcp_wrapper .items_all_wrapper .item_wrapper .item_bottom_wrapper .black {
+  color: black;
 }

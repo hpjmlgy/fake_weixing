@@ -16,7 +16,8 @@ module.exports = {
     mbck: './src/mbck',
     tg: './src/tg',
     tg_all: './src/tg_all',
-    xzcp: './src/xzcp'
+    xzcp: './src/xzcp',
+    zpscc: './src/zpscc'
   },
 
   output: {

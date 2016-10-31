@@ -30,6 +30,9 @@ app.get('/tg_all', function(req, res) {
 app.get('/xzcp', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/xzcp.html'));
 });
+app.get('/zpscc', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/zpscc.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);
