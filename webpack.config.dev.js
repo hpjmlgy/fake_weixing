@@ -11,14 +11,12 @@ module.exports = {
       // listen to code updates emitted by hot middleware:
       'webpack-hot-middleware/client',
       // your code:
-      // './src/index',
-      // './src/mbck'
-      // "./src/mbck": './src/mbck'
     ],
     index: './src/index',
-    mbck: './src/mbck'
+    mbck: './src/mbck',
+    tg: './src/tg',
+    tg_all: './src/tg_all'
   },
-
 
   output: {
     path: path.join(__dirname, 'dist'),

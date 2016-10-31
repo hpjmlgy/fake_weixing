@@ -1,0 +1,28 @@
+#tg_all_wrapper {
+  display: block;
+  position: relative;
+  background-color: #eee;
+  width: 750px;
+  margin: 0 auto;
+}
+#tg_all_wrapper div {
+  display: block;
+  position: relative;
+  width: 710px;
+  background-color: white;
+  margin: 0 auto;
+}
+#tg_all_wrapper div .item_top_wrapper {
+  display: block;
+  position: relative;
+  margin-top: 20px;
+  width: 670px;
+  height: 150px;
+  border-bottom: 1px solid grey;
+}
+#tg_all_wrapper div .item_middle_wrapper {
+  display: block;
+  position: relative;
+  margin-top: 10px;
+  width: 610px;
+}

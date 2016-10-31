@@ -21,6 +21,12 @@ app.get('/', function(req, res) {
 app.get('/mbck', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/mbck.html'));
 });
+app.get('/tg', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/tg.html'));
+});
+app.get('/tg_all', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/tg_all.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);
