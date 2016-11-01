@@ -39,6 +39,9 @@ app.get('/zpzzym', function(req, res) {
 app.get('/mbtz', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/mbtz.html'));
 });
+app.get('/xccc', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/xccc.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);

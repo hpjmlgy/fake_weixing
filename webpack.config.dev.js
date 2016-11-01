@@ -19,7 +19,8 @@ module.exports = {
     xzcp: './src/xzcp',
     zpscc: './src/zpscc',
     zpzzym: './src/zpzzym',
-    mbtz: './src/mbtz'
+    mbtz: './src/mbtz',
+    xccc: './src/xccc' //炫彩尺寸选择
 
   },
 
