@@ -33,6 +33,9 @@ app.get('/xzcp', function(req, res) {
 app.get('/zpscc', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/zpscc.html'));
 });
+app.get('/zpzzym', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/zpzzym.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);

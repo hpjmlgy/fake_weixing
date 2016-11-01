@@ -17,7 +17,8 @@ module.exports = {
     tg: './src/tg',
     tg_all: './src/tg_all',
     xzcp: './src/xzcp',
-    zpscc: './src/zpscc'
+    zpscc: './src/zpscc',
+    zpzzym: './src/zpzzym'
   },
 
   output: {

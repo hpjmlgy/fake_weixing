@@ -1,0 +1,247 @@
+    #mb_wrapper {
+        background-color: white;
+        display: block;
+        position: relative;
+        width: 750px;
+        height: 100%;
+        margin: 0 auto;
+        .mb_item_wrapper {
+            display: block;
+            position: relative;
+            width: 100%;
+            .introduce {
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                height: 120px;
+                background-color: white;
+                text-align: center;
+                &::after {
+                    //父容器位置
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 100%;
+                }
+                .title {
+                    display: inline-block;
+                    font-size: 30px;
+                    overflow: hidden;
+                    vertical-align: middle;
+                    color: #ccc;
+                }
+                .change_template {
+                    position: absolute;
+                    top: 15px;
+                    right: 30px;
+                    width: 200px;
+                    height: 60px;
+                    font-size: 30px;
+                    border-radius: 10px;
+                    border: 1px solid #e52e04;
+                    line-height: 5px;
+                    color: #e52e04;
+                    text-align: center;
+                    background-color: white;
+                }
+            }
+            .nav_wrapper {
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                background-color: white;
+                border-top: 2px solid grey;
+                border-bottom: 1px solid grey;
+                height: 303px;
+                .mb_control_wrapper {
+                    display: block;
+                    position: relative;
+                    margin: 0 auto;
+                    margin-top: 28px;
+                    width: 750px;
+                    overflow: hidden;
+                    height: 100%;
+                    .whole {
+                        display: block;
+                        position: relative;
+                        height: 100%;
+                        transition: margin 1s ease 0s;
+                        .mb_item {
+                            display: inline-block;
+                            position: absolute;
+                            top: 0px;
+                            // height: 390px;
+                            // width: 570px;
+                            height: 205px;
+                            width: 205px;
+                            background-color: white;
+                            border: 1px solid grey;
+                            img {
+                                // display: block;
+                                // margin: 0 auto;
+                                // margin-top: 25px;
+                                position: absolute;
+                                top:0;
+                                left:0;
+                                height: 150px;
+                                width: 150px;
+                                background-color: grey;
+                            }
+                            span {
+                                display: block;
+                                position: absolute;
+                                font-size: 28px;
+                                text-align: center;
+                                bottom: -40px;
+                            }
+                        }
+                        div:nth-child(2n) {
+                            img {
+                                height: 150px;
+                                width: 75px;
+                            }
+                        }
+                    }
+                }
+            }
+            .edtior_wrapper {
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                background-color: white;
+                border-bottom: 1px solid grey;
+                height: 750px;
+            }
+            .tips {
+                display: block;
+                width: 410px;
+                margin: 0 auto;
+                font-size: 22px;
+                color: #e52e04;
+            }
+            .edit_zone {
+                display: block;
+                width: 410px;
+                height: 410px;
+                margin: 0 auto;
+                border: 1px solid red;
+            }
+            .current_num {
+                display: block;
+                text-align: center;
+                font-size: 28px;
+                line-height: 28px;
+                margin-top: 15px;
+            }
+            .count_wrapper {
+                display: flex;
+                margin: 0 auto;
+                margin-top: 77px;
+                width: 260px;
+                height: 60px;
+                position: relative;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                .buy_count {
+                    display: block;
+                    position: relative;
+                    font-size: 30px;
+                    height: 50px;
+                    width: 64px;
+                    text-align: center;
+                }
+                .up,
+                .down {
+                    height: 54px;
+                    width: 54px;
+                    border-radius: 27px;
+                    background-color: red;
+                }
+                span {
+                    font-size: 30px;
+                }
+            }
+            .again {
+                display: block;
+                width: 200px;
+                height: 60px;
+                margin: 0 auto;
+                margin-top: 50px;
+                text-align: center;
+                line-height: 60px;
+                background-color: transparent;
+                border-radius: 15px;
+                color: red;
+                border: 1px solid red;
+            }
+            .deliver_wrapper {
+                display: flex;
+                width: 750px;
+                margin: 0 auto;
+                height: 88px;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                .price_wrapper {
+                    width: 289px;
+                    height: 88px;
+                    span {
+                        display: inline-block;
+                        float: left;
+                        font-size: 22px;
+                        line-height: 88px;
+                        color: grey;
+                    }
+                    .price {
+                        font-size: 30px;
+                        color: #e52e04;
+                    }
+                }
+                .save,
+                .deliver {
+                    height: 88px;
+                    width: 230px;
+                    font-size: 30px;
+                    color: white;
+                    background-color: #e52e04;
+                }
+                .save {
+                    border-right: 1px solid white;
+                }
+            }
+        }
+    }
+    
+    .img_uploader {
+        display: none;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .mb_item {
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        // height: 390px;
+        // width: 570px;
+        height: 205px;
+        width: 205px;
+        background-color: white;
+        border: 1px solid grey;
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 25px;
+            height: 150px;
+            width: 150px;
+            background-color: grey;
+        }
+        span {
+            display: block;
+            position: absolute;
+            font-size: 28px;
+            text-align: center;
+            bottom: -40px;
+        }
+    }

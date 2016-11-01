@@ -1,4 +1,7 @@
 import React from 'react';
+
+
+
 var $ = require('jquery');
 var Swipeable = require('react-swipeable')
 var injectTapEventPlugin = require("react-tap-event-plugin");
