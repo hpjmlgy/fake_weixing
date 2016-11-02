@@ -42,6 +42,27 @@ app.get('/mbtz', function(req, res) {
 app.get('/xccc', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/xccc.html'));
 });
+app.get('/btcc', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/btcc.html'));
+});
+app.get('/wlxq', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/wlxq.html'));
+});
+app.get('/sgtl', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/sgtl.html'));
+});
+app.get('/ddxq', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/ddxq.html'));
+});
+app.get('/zffs', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/zffs.html'));
+});
+app.get('/wd', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/wd.html'));
+});
+app.get('/wddd', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/wddd.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);

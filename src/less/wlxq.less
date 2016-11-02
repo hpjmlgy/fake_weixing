@@ -1,0 +1,85 @@
+#wlxq_wrapper {
+    display: block;
+    width: 750px;
+    margin: 0 auto;
+    .wlxq_module_wrapper {
+        display: block;
+        width: 100%;
+        .Info_wrapper {
+            display: block;
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 20px;
+            border: 1px solid grey;
+            height: 276px;
+            img {
+                display: inline-block;
+                float: left;
+                margin-left: 40px;
+                margin-top: 37px;
+                width: 201px;
+                height: 201px;
+            }
+            .info_detail_wrapper {
+                display: inline-block;
+                position: relative;
+                float: left;
+                margin-left: 40px;
+                margin-top: 37px;
+                span {
+                    clear: both;
+                    display: inline-block;
+                    font-size: 30px;
+                    float: left;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .wl_detail_wrapper {
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            position: relative;
+            .wl_title {
+                display: block;
+                font-size: 28px;
+                height: 90px;
+                margin-top: 20px;
+                line-height: 90px;
+                border-bottom: 2px solid grey;
+            }
+            .wl_items_wrapper {
+                display: block;
+                width: 100%;
+                margin-top: 40px;
+                .elem_wrapper {
+                    display: block;
+                    height: 90px;
+                    margin-left: 71px;
+                    border-left: 2px solid grey;
+                    padding-left: 50px;
+                    &::before {
+                        display: inline-block;
+                        content: "";
+                        position: absolute;
+                        border-radius: 10px;
+                        height: 20px;
+                        width: 20px;
+                        left: 60px;
+                        background-color: red;
+                    }
+                    .info {
+                        display: block;
+                    }
+                    .time {
+                        display: block;
+                        // margin-left: 71px;
+                        // border-left: 2px solid grey;
+                        // padding-left: 50px;
+                    }
+                }
+                margin-bottom: 150px;
+            }
+        }
+    }
+}

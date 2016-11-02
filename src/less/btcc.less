@@ -1,0 +1,148 @@
+#btcc_wrapper {
+    background-color: white;
+    display: block;
+    position: relative;
+    width: 750px;
+    height: 100%;
+    margin: 0 auto;
+    .btcc_item_wrapper {
+        display: block;
+        position: relative;
+        width: 100%;
+        .introduce {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            height: 120px;
+            background-color: white;
+            text-align: center;
+            border-bottom: 2px solid grey;
+            &::after {
+                //父容器位置
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                height: 100%;
+            }
+            .type_title {
+                display: inline-block;
+                font-size: 30px;
+                overflow: hidden;
+                vertical-align: middle;
+                text-align: center;
+                color: #ccc;
+            }
+        }
+    }
+    .photo_wrapper{
+    	 display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: center;
+    	width: 630px;
+    	height: 380px;
+    	margin:0 auto;
+    	margin-top: 70px;
+    	img{
+    		width: 90%;
+    		height: 90%;
+    		background-color: red;
+
+    	}
+
+
+
+    }
+    .size_wrapper {
+        display: block;
+        position: relative;
+        width: 100%;
+        background-color: white;
+        margin-top: 30px;
+        .size_title {
+            margin-bottom: 10px;
+            display: block;
+            text-align: center;
+            font-size: 30px;
+            line-height: 30px;
+        }
+        .size_items_wrapper {
+            display: flex;
+            width: 670px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            //定义主轴间隔
+            text-align: center;
+            div {
+                margin-top: 10px;
+                width: 210px;
+                height: 82px;
+                border: 1px solid grey;
+                font-size: 30px;
+                text-align: center;
+                line-height: 82px;
+            }
+        }
+    }
+    .type_wrapper {
+        display: block;
+        position: relative;
+        width: 100%;
+        background-color: white;
+        margin-top: 40px;
+        border-bottom: 1px solid #ccc;
+        .type_title {
+            margin-bottom: 10px;
+            display: block;
+            text-align: center;
+            font-size: 30px;
+            line-height: 30px;
+        }
+        .type_items_wrapper {
+            display: flex;
+            width: 670px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+            text-align: center;
+            div {
+                margin-top: 20px;
+                width: 320px;
+                height: 82px;
+                border: 1px solid grey;
+                font-size: 30px;
+                text-align: center;
+                line-height: 82px;
+            }
+        }
+    }
+    .price_wrapper {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 88px;
+        .price_items_wrapper {
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            span {
+                font-size: 30px;
+                text-align: center;
+                line-height: 88px;
+            }
+            span:nth-child(2) {
+                color: #e52e04;
+            }
+        }
+    }
+
+
+
+}

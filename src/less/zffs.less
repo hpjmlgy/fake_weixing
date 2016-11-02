@@ -1,0 +1,85 @@
+#zffs_wrapper {
+    display: block;
+    position: relative;
+    width: 750px;
+    margin: 0 auto;
+    background-color: #ccc;
+    .zffs_module_wrapper {
+        display: block;
+        position: relative;
+        width: 100%;
+        .price_wrapper,.pay_zone{
+        	background-color: white;
+        }
+        .price_wrapper {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            height: 210px;
+            span {
+                display: inline-block;
+                width: 50%;
+                height: 100%;
+                font-size: 30px;
+                line-height: 210px;
+            }
+            span:nth-child(1) {
+                // padding-left: 40px;
+                text-align: left;
+            }
+            span:nth-child(2) {
+                // padding-right: 40px;
+                color: #e52e04;
+                text-align: right;
+            }
+        }
+        .pay_zone {
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .pay_type_wrapper {
+                display: inline-block;
+                height: 110px;
+                width: calc(750px-80px);
+                margin: 0 auto;
+                border-bottom: 1px solid grey;
+                overflow: hidden;
+
+                .icon,
+                .title {
+                    display: inline-block;
+                    float: left;
+                    text-align: center;
+                    font-size: 30px;
+                    line-height: 110px;
+                    height: 110px;
+                   
+                }
+                .icon {
+                	display: inline-block;
+                	margin-top: 15px;
+                	margin-left: 40px;
+                    width: 80px;
+                    height: 80px;
+                    background-color: red;
+                }
+                .confirm {
+                    display: inline-block;
+                    margin-top: 25px;
+                    float: right;
+                    width: 60px;
+                    height: 60px;
+                    background-color: red;
+                }
+            }
+        }
+        .blank_space{
+        	display: block;
+        	width: 100%;
+        	height: 300px;
+        	background-color: white;
+        }
+    }
+}

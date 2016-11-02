@@ -1,0 +1,170 @@
+#ddxq_wrapper {
+    display: block;
+    width: 750px;
+    margin: 0 auto;
+    .ddxq_module_wrapper {
+        display: block;
+        width: 100%;
+        .Info_wrapper {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 20px;
+            border: 1px solid grey;
+            height: 278px;
+            img {
+                display: inline-block;
+                float: left;
+                margin-left: 40px;
+                margin-top: 37px;
+                width: 200px;
+                height: 200px;
+            }
+            .info_detail_wrapper {
+                display: inline-block;
+                position: relative;
+                float: left;
+                margin-left: 40px;
+                margin-top: 31px;
+                span {
+                    clear: both;
+                    display: inline-block;
+                    font-size: 30px;
+                    float: left;
+                    margin-bottom: 10px;
+                }
+                span:nth-last-child(1) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .ddxq_address_wrapper {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+            background-color: #ccc;
+            .ddxq_person,
+            .ddxq_address {
+                margin-top: 40px;
+                display: inline-block;
+                font-size: 30px;
+                color: grey;
+                margin-left: 40px
+            }
+            .ddxq_address {
+                margin-top: 20px;
+            }
+            .edit_info {
+                position: absolute;
+                height: 40px;
+                width: 20px;
+                right: 40px;
+                top: 60px;
+                background-color: red;
+            }
+            .grey {
+                display: block;
+                border: 1px solid grey;
+                margin: 0 auto;
+                margin-top: 30px;
+                width: 660px;
+            }
+            .ddxq_consumeTime {
+                display: inline-block;
+                width: 100%;
+                height: 70px;
+                font-size: 30px;
+                line-height: 30px;
+                color: red;
+                margin-left: 40px;
+                margin-top: 20px;
+            }
+        }
+        .ddxq_pay_wrapper {
+            display: block;
+            position: relative;
+            width: 100%;
+            .pay_method_wrapper,
+            .pay_discount_wrapper {
+                display: block;
+                position: relative;
+                width: 90%;
+                height: 90px;
+                margin: 0 auto;
+                border-bottom: 1px solid grey;
+                span {
+                    display: inline-block;
+                    height: 100%;
+                    line-height: 90px;
+                    float: left;
+                    font-size: 30px;
+                    color: grey;
+                }
+                span:nth-last-child(1) {
+                    float: right;
+                }
+            }
+            .pay_discount_wrapper {
+                span:nth-last-child(1) {
+                    color: #e52e04;
+                    margin-right: 40px;
+                }
+            }
+            .edit_discount {
+                position: absolute;
+                height: 40px;
+                width: 20px;
+                right: 40px;
+                top: 115px;
+                background-color: red;
+            }
+        }
+        .submit_order_wrapper {
+            display: block;
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+            .white_space {
+                display: block;
+                width: 100%;
+                height: 268px;
+            }
+            .ddxq_price_info,
+            .ddxq_deliver_cargo_wrapper {
+                display: block;
+                width: 100%;
+                height: 90px;
+                line-height: 90px;
+                color: grey;
+                font-size: 26px;
+            }
+            .ddxq_price_info {
+                border-top: 1px solid grey;
+                border-bottom: 1px solid grey;
+                text-align: center;
+            }
+            .ddxq_deliver_cargo_wrapper {
+                display: block;
+                width: 100%;
+                height: 90px;
+                text-align: center;
+                .ddxq_price_info_wrapper {
+                    width: calc(100%/3);
+                    float: left;
+                    span:nth-child(2){
+                    	color: #e52e04;
+                    }
+                }
+                .add_to_chart,
+                .cargo_submit {
+                    width: calc(100%/3);
+                    float: right;
+                    background-color:  #e52e04;
+                    color: white;
+                }
+            }
+        }
+    }
+}

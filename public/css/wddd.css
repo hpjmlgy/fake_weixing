@@ -1,0 +1,106 @@
+#wddd_wrapper {
+  display: block;
+  width: 750px;
+  margin: 0 auto;
+  background-color: grey;
+}
+.no_ticket_wrapper {
+  display: block;
+  width: 100%;
+  height: 1000px;
+}
+.no_ticket_wrapper img {
+  display: block;
+  height: 250px;
+  width: 250px;
+  background-color: red;
+  margin: 0 auto;
+  margin-top: 300px;
+}
+.no_ticket_wrapper span {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 80%;
+  text-align: center;
+  font-size: 40px;
+  color: red;
+}
+.ticket_wrapper {
+  background-color: white;
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+.ticket_wrapper .ticket_top_module {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 80px;
+}
+.ticket_wrapper .ticket_top_module span {
+  display: inline-block;
+  float: left;
+  font-size: 30px;
+  line-height: 80px;
+  margin-left: 10px;
+}
+.ticket_wrapper .ticket_top_module span:nth-child(2) {
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+}
+.ticket_wrapper .ticket_mid_module {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  height: 210px;
+}
+.ticket_wrapper .ticket_mid_module img {
+  display: inline-block;
+  float: left;
+  width: 170px;
+  height: 170px;
+  margin: 20px;
+}
+.ticket_wrapper .ticket_mid_module .mid_wrapper {
+  display: block;
+  float: left;
+  position: relative;
+}
+.ticket_wrapper .ticket_mid_module .mid_wrapper span {
+  display: block;
+  font-size: 36px;
+  color: #e52e04;
+  float: left;
+  margin-top: 30px;
+}
+.ticket_wrapper .ticket_mid_module .mid_wrapper span:nth-child(2) {
+  margin-top: 20px;
+  color: black;
+  clear: both;
+  margin-left: 6px;
+  font-size: 30px;
+}
+.ticket_wrapper .ticket_bot_module {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  height: 100px;
+}
+.ticket_wrapper .ticket_bot_module button {
+  display: block;
+  float: right;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
+  color: #e52e04;
+  border-radius: 15px;
+  border: 1px solid #e52e04;
+  background-color: white;
+  margin-top: 20px;
+}

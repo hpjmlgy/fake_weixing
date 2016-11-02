@@ -1,0 +1,156 @@
+#wd_wrapper {
+    display: block;
+    width: 750px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    height: 370px;
+    background-color: red;
+}
+
+.user_info {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    div {
+        height: 100%;
+        width: 50%;
+    }
+    .welcome_wrapper {
+        span {
+            font-size: 30px;
+            text-align: center;
+            line-height: 90px;
+        }
+        span:nth-child(1) {
+            margin-left: 40px;
+        }
+        span:nth-child(2) {
+            margin-left: 20px;
+            color: red;
+        }
+    }
+    .level_wrapper {
+        span {
+            font-size: 30px;
+            text-align: center;
+            line-height: 90px;
+        }
+        span:nth-child(1) {
+            margin-left: 60px;
+        }
+        span:nth-child(2) {
+            display: inline-block;
+            margin-left: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+        }
+    }
+}
+
+.modules_wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    // margin-bottom: -20px;  
+    .module_wrapper {
+        position: relative;
+        height: 160px;
+        width: calc(750px/4);
+        background-color: green;
+        margin-bottom: 20px;
+        .module_icon {
+            display: block;
+            margin-left: 50px;
+            margin-top: 40px;
+            height: 50px;
+            width: 60px;
+            background-color: red;
+        }
+        .module_name {
+            display: inline-block;
+            margin-left: 50px;
+            margin-top: 10px;
+            font-size: 26px;
+            text-align: center;
+        }
+    }
+}
+
+.fun_wrapper {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    .fun_item_wrapper {
+        display: inline-block;
+        height: 110px;
+        width: 100%;
+        margin: 0 auto;
+        border-bottom: 1px solid grey;
+        overflow: hidden;
+        .icon,
+        .title {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            margin-left: 30px;
+            font-size: 30px;
+            line-height: 110px;
+            height: 110px;
+        }
+        .icon {
+            display: inline-block;
+            margin-top: 35px;
+            margin-left: 40px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid;
+        }
+        .confirm {
+            display: inline-block;
+            margin-top: 25px;
+            margin-right: 40px;
+            float: right;
+            width: 60px;
+            height: 60px;
+            background-color: red;
+        }
+    }
+}
+
+.bottom_nav {
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    div{
+    	height: 90px;
+    	width: 200px;
+    	background-color: blue;
+    	a{
+    		text-align: center;
+    		margin: 0;
+    		text-decoration: none;
+    		width: 100%;
+    		height: 100%;
+    		line-height: 90px;
+    		font-size: 40px;
+    		color:white;
+    	}
+    }
+    div:nth-child(2){
+    	width: 348px;
+    }
+}

@@ -1,0 +1,82 @@
+#wlxq_wrapper {
+  display: block;
+  width: 750px;
+  margin: 0 auto;
+}
+#wlxq_wrapper .wlxq_module_wrapper {
+  display: block;
+  width: 100%;
+}
+#wlxq_wrapper .wlxq_module_wrapper .Info_wrapper {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1px solid grey;
+  height: 276px;
+}
+#wlxq_wrapper .wlxq_module_wrapper .Info_wrapper img {
+  display: inline-block;
+  float: left;
+  margin-left: 40px;
+  margin-top: 37px;
+  width: 201px;
+  height: 201px;
+}
+#wlxq_wrapper .wlxq_module_wrapper .Info_wrapper .info_detail_wrapper {
+  display: inline-block;
+  position: relative;
+  float: left;
+  margin-left: 40px;
+  margin-top: 37px;
+}
+#wlxq_wrapper .wlxq_module_wrapper .Info_wrapper .info_detail_wrapper span {
+  clear: both;
+  display: inline-block;
+  font-size: 30px;
+  float: left;
+  margin-bottom: 20px;
+}
+#wlxq_wrapper .wlxq_module_wrapper .wl_detail_wrapper {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+#wlxq_wrapper .wlxq_module_wrapper .wl_detail_wrapper .wl_title {
+  display: block;
+  font-size: 28px;
+  height: 90px;
+  margin-top: 20px;
+  line-height: 90px;
+  border-bottom: 2px solid grey;
+}
+#wlxq_wrapper .wlxq_module_wrapper .wl_detail_wrapper .wl_items_wrapper {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 150px;
+}
+#wlxq_wrapper .wlxq_module_wrapper .wl_detail_wrapper .wl_items_wrapper .elem_wrapper {
+  display: block;
+  height: 90px;
+  margin-left: 71px;
+  border-left: 2px solid grey;
+  padding-left: 50px;
+}
+#wlxq_wrapper .wlxq_module_wrapper .wl_detail_wrapper .wl_items_wrapper .elem_wrapper::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  left: 60px;
+  background-color: red;
+}
+#wlxq_wrapper .wlxq_module_wrapper .wl_detail_wrapper .wl_items_wrapper .elem_wrapper .info {
+  display: block;
+}
+#wlxq_wrapper .wlxq_module_wrapper .wl_detail_wrapper .wl_items_wrapper .elem_wrapper .time {
+  display: block;
+}
