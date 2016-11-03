@@ -27,7 +27,8 @@ module.exports = {
     ddxq: './src/ddxq', //25订单详情
     zffs: './src/zffs', //26支付方式
     wd: './src/wd', //我的
-    wddd: './src/wddd' //28+29我的订单
+    wddd: './src/wddd', //28+29我的订单
+    yhj: './src/yhj'
 
   },
 

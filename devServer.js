@@ -63,6 +63,9 @@ app.get('/wd', function(req, res) {
 app.get('/wddd', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/wddd.html'));
 });
+app.get('/yhj', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/yhj.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);
