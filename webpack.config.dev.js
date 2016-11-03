@@ -28,7 +28,10 @@ module.exports = {
     zffs: './src/zffs', //26支付方式
     wd: './src/wd', //我的
     wddd: './src/wddd', //28+29我的订单
-    yhj: './src/yhj'
+    yhj: './src/yhj', //30+31优惠券
+    hb: './src/hb', //32红包
+    yce: './src/yce'
+
 
   },
 
