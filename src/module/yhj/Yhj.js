@@ -6,8 +6,8 @@ injectTapEventPlugin();
 
 var Yhj = React.createClass({
   render: function() {
-    var ticket_num = this.props.coupon.length;
-    if (ticket_num == 0) {
+    var coupon_num = this.props.coupon.length;
+    if (coupon_num == 0) {
 
       return (
         <section className={"no_coupon_wrapper"}>
@@ -19,7 +19,7 @@ var Yhj = React.createClass({
 
     } else {
 
-      var tickets = this.props.tickets.map(function(elem) {
+      var coupons = this.props.coupon.map(function(elem) {
         return (
           <section className="coupon_wrapper">
                  <div className="ticket_top_module">
@@ -45,7 +45,7 @@ var Yhj = React.createClass({
       });
 
       return (
-        <section>{tickets}</section>
+        <section>{coupons}</section>
       )
     }
 
