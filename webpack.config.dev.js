@@ -30,7 +30,9 @@ module.exports = {
     wddd: './src/wddd', //28+29我的订单
     yhj: './src/yhj', //30+31优惠券
     hb: './src/hb', //32红包
-    yce: './src/yce'
+    yce: './src/yce', //33预存额
+    gwc: './src/gwc', //34,35购物车
+    dzgl: './src/dzgl' //36,37,38地址管理
 
 
   },

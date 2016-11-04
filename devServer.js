@@ -72,6 +72,12 @@ app.get('/hb', function(req, res) {
 app.get('/yce', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/yce.html'));
 });
+app.get('/gwc', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/gwc.html'));
+});
+app.get('/dzgl', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/dzgl.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);
