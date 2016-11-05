@@ -8,7 +8,6 @@ var Bottom_module = React.createClass({
   getInitialState: function() {
     return {
       login_state: 0,
-      reset: 0
     }
   },
   componentDidMount: function(e) {
@@ -16,20 +15,13 @@ var Bottom_module = React.createClass({
   },
   go_login: function(e) {
     this.setState({
-      reset: 1,
+      login_state: 1
     })
-    var o = this
-    setTimeout(function() {
-        o.setState({
-          login_state: 1,
-        })
-      }, 100)
-      //  login_state: 1
+
   },
   go_register: function(e) {
     this.setState({
       login_state: 0,
-      reset: 1
     })
 
   },

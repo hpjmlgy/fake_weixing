@@ -33,18 +33,17 @@ var Get_code = React.createClass({
 
 	},
 	componentWillReceiveProps(nextProps) {
-		if (nextProps.reset == 1 && this.interval != undefined) {
-			clearInterval(this.interval)
-			this.setState({
-				get_code: 0,
-				time_count: "(60s)"
-			});
-		}
-
 
 	},
 	componentDidMount: function(e) {
 
+	},
+	componentWillUnmount() {
+		clearInterval(this.interval);
+		this.setState({
+			get_code: 0,
+			time_count: "(60s)"
+		});
 	},
 	handle_checkCode: function(e) {
 		if (this.state.get_code == 0) {

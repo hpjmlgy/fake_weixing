@@ -87,6 +87,9 @@ app.get('/grzx', function(req, res) {
 app.get('/dlzc', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/dlzc.html'));
 });
+app.get('/sszz', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/sszz.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);

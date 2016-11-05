@@ -36,7 +36,8 @@ module.exports = {
     gywm: './src/gywm', //39关于我们
     //40联系客服（页面逻辑问题）
     grzx: './src/grzx', //41个人中心 42修改登录手机
-    dlzc: './src/dlzc' //43,44登录注册
+    dlzc: './src/dlzc', //43,44登录注册
+    sszz: './src/sszz' //45时尚杂志介绍
 
 
   },
