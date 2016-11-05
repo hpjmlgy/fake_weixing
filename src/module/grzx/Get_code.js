@@ -7,7 +7,7 @@ var Get_code = React.createClass({
 	getInitialState: function() {
 		return {
 			get_code: 0,
-			time_count: "(60s)"
+			time_count: "(60s)",
 		}
 	},
 	tick: function() {
@@ -32,6 +32,20 @@ var Get_code = React.createClass({
 		}
 
 	},
+	componentWillReceiveProps(nextProps) {
+		if (nextProps.reset == 1 && this.interval != undefined) {
+			clearInterval(this.interval)
+			this.setState({
+				get_code: 0,
+				time_count: "(60s)"
+			});
+		}
+
+
+	},
+	componentDidMount: function(e) {
+
+	},
 	handle_checkCode: function(e) {
 		if (this.state.get_code == 0) {
 			//还未计时
@@ -44,7 +58,7 @@ var Get_code = React.createClass({
 			this.interval = setInterval(() => this.tick(), 1000);
 
 		} else {
-			console.log("hehe");
+
 			//已经计时,不做任何处理
 		}
 	},

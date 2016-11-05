@@ -15,14 +15,14 @@ var Dlzc = React.createClass({
   },
   componentDidMount: function(e) {
     // $('.edit_mobile_wrapper').css("display", "none")
+    // console.log(this.state.get_code);
   },
-
   render: function() {
     var o = this;
     return (
       <section className="dlzc_module_wrapper">
           <Top_module/>
-          <Bottom_module/>
+          <Bottom_module test={o.test}/>
       </section>
     )
 
