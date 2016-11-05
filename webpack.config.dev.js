@@ -32,7 +32,11 @@ module.exports = {
     hb: './src/hb', //32红包
     yce: './src/yce', //33预存额
     gwc: './src/gwc', //34,35购物车
-    dzgl: './src/dzgl' //36,37,38地址管理
+    dzgl: './src/dzgl', //36,37,38地址管理
+    gywm: './src/gywm', //39关于我们
+    //40联系客服（页面逻辑问题）
+    grzx: './src/grzx', //41个人中心 42修改登录手机
+    dlzc: './src/dlzc' //43,44登录注册
 
 
   },

@@ -8,9 +8,10 @@ var Address_card = React.createClass({
 
 
   handleTap: function(e) {
-    console.log(e);
-
+    $(e.target).parent().parent().remove()
+      //update remoteDatabase
   },
+
   render: function() {
     var o = this;
 

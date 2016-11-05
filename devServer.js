@@ -78,6 +78,15 @@ app.get('/gwc', function(req, res) {
 app.get('/dzgl', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/dzgl.html'));
 });
+app.get('/gywm', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/gywm.html'));
+});
+app.get('/grzx', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/grzx.html'));
+});
+app.get('/dlzc', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/dlzc.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);

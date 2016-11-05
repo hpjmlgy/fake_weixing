@@ -1,5 +1,6 @@
 import React from 'react';
 import Address_card from './Address_card'
+import Edit_info from './Edit_info'
 import ReactDOM from 'react-dom'
 var $ = require('jquery');
 var injectTapEventPlugin = require("react-tap-event-plugin");
@@ -14,36 +15,63 @@ var Dzgl = React.createClass({
   },
   add_address: function(e) {
     if (this.props.data.length == 0) {
+      //空地址时，显示编辑界面
+      switch ($('.form_wrapper').css("display")) {
+        case "none":
+          $('.form_wrapper').css("display", "block")
+          break
+        case "block":
+          $('.form_wrapper').css("display", "none")
+          break
+      }
 
     } else {
-      $('.address_wrapper').css('display', 'none')
-      $('.action_wrapper').css('display', 'none')
+
+
+      switch ($('.form_wrapper').css("display")) {
+        case "none":
+          $('.address_wrapper').css('display', 'none')
+          $('.action_wrapper').css('display', 'none')
+          $('.form_wrapper').css("display", "block")
+          break
+        case "block":
+          $('.form_wrapper').css("display", "none")
+          $('.address_wrapper').css('display', 'block')
+          $('.action_wrapper').css('display', 'block')
+          break
+      }
 
     }
 
   },
   update_address: function(e) {
-
+    //提交地址数据时更新DOM逻辑
     var section_string = "<section " + "class=123" + "></section>"
+    var form = $('.form_wrapper')
     if (this.props.data.length == 0) {
-      console.log("1");
+
+      $('.form_wrapper').remove()
       $('#empty_address_section').append(section_string)
       var target_container = $('.123')[$('.123').length - 1]
-      var xx = <Address_card data={{name:"女汉子",phone:"15366985964",address_info:"中国 北京 朝阳区 水晶鞋xXXXXXX"}}/>
+      var address_card = <Address_card data={{name:"女汉子",phone:"15366985964",address_info:"中国 北京 朝阳区 水晶鞋xXXXXXX"}}/>
       ReactDOM.render(
-        xx,
+        address_card,
         target_container
       );
-      //update remote database
+
+      $('#empty_address_section').append(form)
+        //update remote database
     } else {
+      $('.form_wrapper').remove()
       $('#full_address_section').append(section_string)
       var target_container = $('.123')[$('.123').length - 1]
-      var xx = <Address_card data={{name:"女汉子",phone:"15366985964",address_info:"中国 北京 朝阳区 水晶鞋xXXXXXX"}}/>
+      var address_card = <Address_card data={{name:"女汉子",phone:"15366985964",address_info:"中国 北京 朝阳区 水晶鞋xXXXXXX"}}/>
       ReactDOM.render(
-        xx,
+        address_card,
         target_container
       );
-      //update remote database
+      $('#full_address_section').append(form)
+        //update remote database
 
     }
 
@@ -51,6 +79,9 @@ var Dzgl = React.createClass({
   render: function() {
     var o = this;
     var dz_num = this.props.data.length;
+    var input_info_module_style = {
+      display: "none"
+    };
     if (dz_num == 0) {
       //返回空界面
       return (
@@ -59,6 +90,8 @@ var Dzgl = React.createClass({
               <span className="title">添加收获地址</span>
               <button className="add_address" onTouchTap={o.add_address} ></button>
            </section>
+           <Edit_info/>
+         
         </section>
       )
 
@@ -79,6 +112,7 @@ var Dzgl = React.createClass({
               <button className="add_address" onTouchTap={o.add_address} ></button>
            </section>
            {address}
+           <Edit_info/>
         </section>
 
       )
