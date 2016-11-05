@@ -1,5 +1,6 @@
 import React from 'react';
 import Top_module from './Top_module'
+import Bottom_module from './Bottom_module'
 
 var $ = require('jquery');
 var injectTapEventPlugin = require("react-tap-event-plugin");
@@ -21,6 +22,7 @@ var Dlzc = React.createClass({
     return (
       <section className="dlzc_module_wrapper">
           <Top_module/>
+          <Bottom_module/>
       </section>
     )
 

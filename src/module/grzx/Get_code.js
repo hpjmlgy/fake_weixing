@@ -26,6 +26,9 @@ var Get_code = React.createClass({
 				get_code: 0
 			})
 			clearInterval(this.interval)
+			this.setState({
+				time_count: "(60s)"
+			})
 		}
 
 	},

@@ -74,3 +74,238 @@
   line-height: 26px;
   text-align: center;
 }
+#dlzc_wrapper .bottom_module_wrapper,
+#dlzc_wrapper .bottom_module_wrapper2 {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 94px;
+  font-size: 30px;
+}
+#dlzc_wrapper .bottom_module_wrapper .name_wrapper,
+#dlzc_wrapper .bottom_module_wrapper2 .name_wrapper {
+  display: block;
+  width: 630px;
+  margin: 0 auto;
+  height: 90px;
+}
+#dlzc_wrapper .bottom_module_wrapper .name_wrapper span,
+#dlzc_wrapper .bottom_module_wrapper2 .name_wrapper span {
+  display: block;
+  float: left;
+  width: 140px;
+  height: 90px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 90px;
+  border: 1px solid grey;
+}
+#dlzc_wrapper .bottom_module_wrapper .name_wrapper .input_username,
+#dlzc_wrapper .bottom_module_wrapper2 .name_wrapper .input_username {
+  display: block;
+  float: left;
+  width: 490px;
+  height: 90px;
+  box-sizing: border-box;
+  line-height: 90px;
+  border: 1px solid grey;
+  border-left: 0px;
+  font-size: 30px;
+  color: grey;
+}
+#dlzc_wrapper .bottom_module_wrapper .phone_wrapper,
+#dlzc_wrapper .bottom_module_wrapper2 .phone_wrapper {
+  display: block;
+  width: 630px;
+  margin: 0 auto;
+  height: 90px;
+}
+#dlzc_wrapper .bottom_module_wrapper .phone_wrapper span,
+#dlzc_wrapper .bottom_module_wrapper2 .phone_wrapper span {
+  display: block;
+  float: left;
+  width: 140px;
+  height: 90px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 90px;
+  border: 1px solid grey;
+}
+#dlzc_wrapper .bottom_module_wrapper .phone_wrapper .input_phone,
+#dlzc_wrapper .bottom_module_wrapper2 .phone_wrapper .input_phone {
+  display: block;
+  float: left;
+  width: 490px;
+  height: 90px;
+  box-sizing: border-box;
+  line-height: 90px;
+  border: 1px solid grey;
+  border-left: 0px;
+  font-size: 30px;
+  color: grey;
+}
+#dlzc_wrapper .bottom_module_wrapper .password_wrapper,
+#dlzc_wrapper .bottom_module_wrapper2 .password_wrapper {
+  display: block;
+  width: 630px;
+  height: 90px;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+#dlzc_wrapper .bottom_module_wrapper .password_wrapper span,
+#dlzc_wrapper .bottom_module_wrapper2 .password_wrapper span {
+  display: block;
+  float: left;
+  width: 140px;
+  height: 90px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 90px;
+  border: 1px solid grey;
+}
+#dlzc_wrapper .bottom_module_wrapper .password_wrapper .input_password,
+#dlzc_wrapper .bottom_module_wrapper2 .password_wrapper .input_password {
+  display: block;
+  float: left;
+  width: 490px;
+  height: 90px;
+  box-sizing: border-box;
+  line-height: 90px;
+  border: 1px solid grey;
+  border-left: 0px;
+  font-size: 30px;
+  color: grey;
+}
+#dlzc_wrapper .bottom_module_wrapper .code_wrapper,
+#dlzc_wrapper .bottom_module_wrapper2 .code_wrapper {
+  display: block;
+  width: 630px;
+  height: 90px;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+#dlzc_wrapper .bottom_module_wrapper .code_wrapper .yzm,
+#dlzc_wrapper .bottom_module_wrapper2 .code_wrapper .yzm {
+  display: block;
+  float: left;
+  width: 140px;
+  height: 90px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 90px;
+  border: 1px solid grey;
+}
+#dlzc_wrapper .bottom_module_wrapper .code_wrapper .input_code,
+#dlzc_wrapper .bottom_module_wrapper2 .code_wrapper .input_code {
+  display: block;
+  float: left;
+  width: 290px;
+  height: 90px;
+  box-sizing: border-box;
+  line-height: 90px;
+  border: 1px solid grey;
+  border-left: 0px;
+  font-size: 30px;
+  color: grey;
+}
+#dlzc_wrapper .bottom_module_wrapper .code_wrapper .get_code_wrapper,
+#dlzc_wrapper .bottom_module_wrapper2 .code_wrapper .get_code_wrapper {
+  display: block;
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 90px;
+  box-sizing: border-box;
+  background-color: grey;
+  text-align: center;
+}
+#dlzc_wrapper .bottom_module_wrapper .code_wrapper .get_code_wrapper span,
+#dlzc_wrapper .bottom_module_wrapper2 .code_wrapper .get_code_wrapper span {
+  display: block;
+  width: 200px;
+  height: 90px;
+  font-size: 30px;
+  line-height: 90px;
+  text-align: center;
+  color: white;
+}
+#dlzc_wrapper .bottom_module_wrapper .code_wrapper .get_code_wrapper2,
+#dlzc_wrapper .bottom_module_wrapper2 .code_wrapper .get_code_wrapper2 {
+  display: block;
+  float: left;
+  width: 200px;
+  height: 90px;
+  font-size: 30px;
+  text-align: center;
+  background-color: grey;
+}
+#dlzc_wrapper .bottom_module_wrapper .code_wrapper .get_code_wrapper2 span,
+#dlzc_wrapper .bottom_module_wrapper2 .code_wrapper .get_code_wrapper2 span {
+  color: white;
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 10px;
+  line-height: 30px;
+}
+#dlzc_wrapper .bottom_module_wrapper .code_wrapper .get_code_wrapper2 span:nth-child(2),
+#dlzc_wrapper .bottom_module_wrapper2 .code_wrapper .get_code_wrapper2 span:nth-child(2) {
+  color: white;
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 10px;
+  line-height: 30px;
+}
+#dlzc_wrapper .bottom_module_wrapper .fun_wrapper,
+#dlzc_wrapper .bottom_module_wrapper2 .fun_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  color: grey;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 630px;
+}
+#dlzc_wrapper .bottom_module_wrapper .register,
+#dlzc_wrapper .bottom_module_wrapper2 .register,
+#dlzc_wrapper .bottom_module_wrapper .login_in,
+#dlzc_wrapper .bottom_module_wrapper2 .login_in {
+  display: block;
+  width: 630px;
+  height: 70px;
+  margin: 0 auto;
+  margin-top: 86px;
+  border: 0px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 70px;
+  border: 1px solid #e52e04;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #e52e04;
+}
+#dlzc_wrapper .bottom_module_wrapper .register,
+#dlzc_wrapper .bottom_module_wrapper2 .register {
+  margin-top: 46px;
+}
+#dlzc_wrapper .bottom_module_wrapper .registered_wrapper,
+#dlzc_wrapper .bottom_module_wrapper2 .registered_wrapper {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 26px;
+  width: 630px;
+}
+#dlzc_wrapper .bottom_module_wrapper .registered_wrapper div,
+#dlzc_wrapper .bottom_module_wrapper2 .registered_wrapper div {
+  display: block;
+  font-size: 26px;
+  height: 26px;
+  line-height: 26px;
+  float: right;
+  margin-right: 40px;
+  color: blue;
+}
