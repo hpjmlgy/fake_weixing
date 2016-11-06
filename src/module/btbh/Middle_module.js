@@ -2,6 +2,11 @@ import React from 'react';
 var $ = require('jquery');
 import * as allModule from './Btbh_middle_module.js'
 
+var queue = []
+for (var p in allModule) {
+  queue.push(p)
+}
+
 
 var Middle_module = React.createClass({
 
@@ -19,7 +24,7 @@ var Middle_module = React.createClass({
            <allModule.Btbh_type1_middle_module  />
              <allModule.Btbh_type2_middle_module  />
              <allModule.Btbh_type3_middle_module  />
-              <allModule.Btbh_type4_middle_module  />
+            {React.createElement(allModule[queue.pop()])}
 
       </section>
     )
@@ -28,8 +33,4 @@ var Middle_module = React.createClass({
 
 export default Middle_module;
 
-// <allModule.Xccy_type1_middle_module  />
-// <allModule.Xccy_type2_middle_module  />
-// <allModule.Xccy_type3_middle_module  />
-// <allModule.Xccy_type4_middle_module  />
-// <allModule.Xccy_type5_middle_module  />
+// <allModule.Btbh_type4_middle_module  />
