@@ -30,7 +30,9 @@ var Middle_module = React.createClass({
       <section className="Middle_module_wrapper">
           <allModule.Type1_middle_module desc={"A3/24页： 39元"} desc1={"A3/24页： 39元"}/>
           <allModule.Type2_middle_module desc={"A3/24页： 39元"} desc1={"A3/24页： 39元"}/>
-          <allModule.Type3_middle_module desc={"A3/24页： 39元"} desc1={"A3/24页： 39元"}/>  
+          <allModule.Type3_middle_module desc={"A3/24页： 39元"} desc1={"A3/24页： 39元"}/> 
+          <allModule.Type4_middle_module desc={"细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍"} />   
+          <allModule.Type5_middle_module desc={"绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍细节介绍"} />   
         </section>
     )
   }

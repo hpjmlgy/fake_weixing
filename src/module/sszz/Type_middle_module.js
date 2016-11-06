@@ -96,8 +96,64 @@ var Type3_middle_module = React.createClass({
   }
 })
 
+var Type4_middle_module = React.createClass({
+
+  componentDidMount: function() {
+
+  },
+  handleTap: function(e) {
+
+  },
+  render: function() {
+    var o = this;
+
+    return (
+      <section className="Type4_middle_module_wrapper">
+          <section className="top_wrapper">
+                <img src="" alt=""/>
+                <span>{this.props.desc}</span>
+          </section>
+          <section className="bottom_wrapper">
+                <img src="" alt=""/>
+          </section>
+      
+        </section>
+    )
+  }
+})
+
+var Type5_middle_module = React.createClass({
+
+  componentDidMount: function() {
+
+  },
+  handleTap: function(e) {
+
+  },
+  render: function() {
+    var o = this;
+
+    return (
+      <section className="Type5_middle_module_wrapper">
+          <section className="left_wrapper">
+                <img src="" alt=""/>
+                <span>{this.props.desc}</span>
+          </section>
+          <section className="right_wrapper">
+                <img src="" alt=""/>
+          </section>
+      
+        </section>
+    )
+  }
+})
+
+
+
 export {
   Type1_middle_module,
   Type2_middle_module,
-  Type3_middle_module
+  Type3_middle_module,
+  Type4_middle_module,
+  Type5_middle_module
 };

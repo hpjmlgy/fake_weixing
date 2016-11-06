@@ -5,7 +5,7 @@ var $ = require('jquery');
 //全局变量
 
 
-var Top_module = React.createClass({
+var Bottom_module = React.createClass({
 
     componentDidMount: function() {
 
@@ -15,21 +15,22 @@ var Top_module = React.createClass({
     },
     render: function() {
       var o = this;
-      var desc = this.props.desc.map(function(elem) {
+    var desc = this.props.desc.map(function(elem) {
         return (
           <span>{elem.content}</span>
         )
       })
       return (
-        <section className="top_module_wrapper">
-             <div className="big_img"></div>
-             <section className="desc_wrapper">
-                 {desc}
-             </section>  
+        <section className="bottom_module_wrapper">
+          <section className="middle_module">
+                <div className="icon_img"></div>
+             {desc}      
+          </section>
+           
         </section>
       )
     }
   })
   // 
 
-export default Top_module;
+export default Bottom_module;

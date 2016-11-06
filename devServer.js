@@ -90,6 +90,15 @@ app.get('/dlzc', function(req, res) {
 app.get('/sszz', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/sszz.html'));
 });
+app.get('/ykjz', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/ykjz.html'));
+});
+app.get('/xccy', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/xccy.html'));
+});
+app.get('/btbh', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/btbh.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);

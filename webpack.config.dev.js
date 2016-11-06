@@ -37,7 +37,10 @@ module.exports = {
     //40联系客服（页面逻辑问题）
     grzx: './src/grzx', //41个人中心 42修改登录手机
     dlzc: './src/dlzc', //43,44登录注册
-    sszz: './src/sszz' //45时尚杂志介绍
+    sszz: './src/sszz', //45时尚杂志介绍
+    ykjz: './src/ykjz', //46硬壳精装
+    xccy: './src/xccy', //47-49炫彩冲印
+    btbh: './src/btbh' //50摆台版画
 
 
   },

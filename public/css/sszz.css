@@ -1,3 +1,9 @@
+#sszz_wrapper {
+  display: block;
+  width: 750px;
+  margin: 0 auto;
+  position: relative;
+}
 .top_module_wrapper {
   display: block;
   width: 750px;
@@ -23,6 +29,9 @@
 }
 .Middle_module_wrapper {
   width: 100%;
+  display: block;
+  position: relative;
+  margin: 0 auto;
 }
 .Type1_middle_module_wrapper {
   display: block;
@@ -169,4 +178,126 @@
   width: 50%;
   height: 300px;
   float: left;
+}
+.Type4_middle_module_wrapper {
+  display: block;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.Type4_middle_module_wrapper .top_wrapper {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+.Type4_middle_module_wrapper .top_wrapper img {
+  display: block;
+  width: 200px;
+  height: 80px;
+  background-color: red;
+}
+.Type4_middle_module_wrapper .top_wrapper span {
+  display: block;
+  margin-top: 20px;
+  font-size: 22px;
+}
+.Type4_middle_module_wrapper .bottom_wrapper {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.Type4_middle_module_wrapper .bottom_wrapper img {
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-color: red;
+}
+.Type5_middle_module_wrapper {
+  display: block;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.Type5_middle_module_wrapper .left_wrapper,
+.Type5_middle_module_wrapper .right_wrapper {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 300px;
+  float: left;
+  margin-top: 50px;
+}
+.Type5_middle_module_wrapper .left_wrapper img {
+  display: block;
+  width: 200px;
+  height: 80px;
+  background-color: red;
+  margin-left: 30px;
+}
+.Type5_middle_module_wrapper .left_wrapper span {
+  display: block;
+  margin-top: 20px;
+  font-size: 22px;
+  margin-left: 30px;
+}
+.Type5_middle_module_wrapper .right_wrapper img {
+  display: block;
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  margin: 0 auto;
+  margin-left: 80px;
+}
+.bottom_module_wrapper {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 300px;
+  border-top: 2px solid grey;
+}
+.bottom_module_wrapper .middle_module {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 340px;
+}
+.bottom_module_wrapper .middle_module .icon_img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: red;
+}
+.bottom_module_wrapper .middle_module span {
+  display: block;
+  font-size: 30px;
+  color: #e52e04;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+.bottom_module_wrapper .middle_module span:last-child {
+  display: block;
+  font-size: 30px;
+  color: black;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.sszz_go_produce {
+  display: block;
+  width: 100%;
+  background-color: #e52e04;
+  color: white;
+  height: 87px;
+  line-height: 87px;
+  border: 0px;
+  text-align: center;
 }
