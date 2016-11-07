@@ -99,6 +99,9 @@ app.get('/xccy', function(req, res) {
 app.get('/btbh', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/btbh.html'));
 });
+app.get('/zpsbj', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/zpsbj.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);

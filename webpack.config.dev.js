@@ -20,6 +20,9 @@ module.exports = {
     zpscc: './src/zpscc',
     zpzzym: './src/zpzzym', //8照片制作页面（未完）
     mbtz: './src/mbtz', //9模板调整
+
+    zpsbj: './src/zpsbj', //11照片书编辑页面
+
     xccc: './src/xccc', //炫彩尺寸选择
     btcc: './src/btcc', //17摆台尺寸选择
     wlxq: './src/wlxq', //20物流详情
@@ -64,6 +67,7 @@ module.exports = {
       test: /\.css$/,
       exclude: /node_modules/,
       loader: 'style!css'
+        // loader: 'style-loader!css-loader'
     }, {
       test: /\.(png|jpg)$/,
       exclude: /node_modules/,

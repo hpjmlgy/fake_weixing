@@ -2,6 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import Zpzzym from './module/zpzzym/Zpzzym'
 
+// import * as allModule from './Btbh_middle_module.js'
+
+// var queue = []
+// for (var p in allModule) {
+//   queue.push(p)
+// }
 
 
 // ReactDOM.render(
