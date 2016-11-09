@@ -108,23 +108,25 @@
   display: block;
   width: 410px;
   margin: 0 auto;
+  margin-top: 120px;
   font-size: 22px;
   color: #e52e04;
 }
 #mb_wrapper .mb_item_wrapper .edit_zone {
   display: block;
   position: relative;
-  width: 410px;
-  height: 205px;
+  width: 670px;
+  height: 290px;
   margin: 0 auto;
+  margin-top: 50px;
 }
 #mb_wrapper .mb_item_wrapper .edit_zone .left_wrapper,
 #mb_wrapper .mb_item_wrapper .edit_zone .right_wrapper {
   display: block;
   position: relative;
   float: left;
-  height: 205px;
-  width: 205px;
+  height: 290px;
+  width: 335px;
   box-sizing: border-box;
   border: 1px solid grey;
 }
@@ -132,14 +134,19 @@
 #mb_wrapper .mb_item_wrapper .edit_zone .right_wrapper img {
   background-color: grey;
 }
-#mb_wrapper .mb_item_wrapper .edit_zone .left_wrapper span,
-#mb_wrapper .mb_item_wrapper .edit_zone .right_wrapper span {
-  position: absolute;
-  font-size: 28px;
-  top: 205px;
-}
 #mb_wrapper .mb_item_wrapper .edit_zone .right_wrapper span {
   right: 0px;
+}
+#mb_wrapper .mb_item_wrapper .edit_zone .left_span {
+  clear: both;
+  float: left;
+  font-size: 28px;
+  margin-top: 10px;
+}
+#mb_wrapper .mb_item_wrapper .edit_zone .right_span {
+  float: right;
+  font-size: 28px;
+  margin-top: 10px;
 }
 #mb_wrapper .mb_item_wrapper .current_num {
   display: block;

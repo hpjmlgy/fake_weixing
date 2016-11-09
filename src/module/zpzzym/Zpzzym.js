@@ -10,9 +10,15 @@ var current_left_imgs = []
 var current_right_imgs = []
 var current_big_page = []
 
+var edit_zone_scalex = parseFloat((335 / 205).toFixed(5));
+var edit_zone_scaley = parseFloat((290 / 205).toFixed(5));
+
 var Zpzzym = React.createClass({
 
   componentDidMount: function() {
+
+    // var scale_string = 'scale(' + edit_zone_scalex + "," + edit_zone_scaley + ')'
+    // $('.edit_zone').css('transform', scale_string);
 
   },
 
@@ -24,17 +30,19 @@ var Zpzzym = React.createClass({
   handleTap: function(e) {
 
     if ($(e.target).attr('class') == 'left_wrapper' || $(e.target).attr('class') == 'right_wrapper') {
-      console.log($(e.target).parent().data('id')); //大页ID
+      // console.log($(e.target).parent().data('id')); //大页ID
 
       $('#left_wrapper').empty()
       $('#right_wrapper').empty()
       var scale = $(e.target).parent().data('scale')
         //返回左侧的贴图
+      var Page_LEFT_ID = current_left_imgs[$(e.target).parent().data('id') - 1].id
+
       var imgs_in_onePage_left = current_left_imgs[$(e.target).parent().data('id') - 1].img.map(function(elem) {
-          var top = elem.top * scale
-          var left = elem.left * scale
-          var width = elem.width * scale
-          var height = elem.height * scale
+          var top = elem.top * scale * edit_zone_scaley
+          var left = elem.left * scale * edit_zone_scalex
+          var width = elem.width * scale * edit_zone_scalex
+          var height = elem.height * scale * edit_zone_scaley
           var small_Page_ID = current_left_imgs[$(e.target).parent().data('id') - 1].id + "_" + elem.id
           var img_style = {
             position: 'absolute',
@@ -48,11 +56,14 @@ var Zpzzym = React.createClass({
 
         })
         //返回右侧贴图
+
+      var Page_RIGHT_ID = current_right_imgs[$(e.target).parent().data('id') - 1].id
+
       var imgs_in_onePage_right = current_right_imgs[$(e.target).parent().data('id') - 1].img.map(function(elem) {
-        var top = elem.top * scale
-        var left = elem.left * scale
-        var width = elem.width * scale
-        var height = elem.height * scale
+        var top = elem.top * scale * edit_zone_scaley
+        var left = elem.left * scale * edit_zone_scalex
+        var width = elem.width * scale * edit_zone_scalex
+        var height = elem.height * scale * edit_zone_scaley
         var small_Page_ID = current_right_imgs[$(e.target).parent().data('id') - 1].id + "_" + elem.id
         var img_style = {
           position: 'absolute',
@@ -87,11 +98,12 @@ var Zpzzym = React.createClass({
         <Right/>,
         document.getElementById('right_wrapper')
       );
+      $('.left_span').html("第" + Page_LEFT_ID + "页")
+      $('.right_span').html("第" + Page_RIGHT_ID + "页")
 
     }
 
-    // $('#page_nav').tmpl(page_data).appendTo('body');
-    // console.log(tmpl);
+
 
   },
   handleLeftSwipe: function(e) {
@@ -211,6 +223,7 @@ var Zpzzym = React.createClass({
       current_big_page.push(Page_ID)
 
 
+
       return (
         <Swipeable data-scale={scale}  onTouchTap={o.handleTap}  style={item_style} onSwipedLeft={o.handleLeftSwipe} onSwipedRight={o.handleRightSwipe} delta={80} stopPropagation={true} className="mb_item"  data-id={elem.id} data-num={num_items} ref={"mb_item"+elem.id} >
            <div className="left_wrapper">
@@ -242,11 +255,14 @@ var Zpzzym = React.createClass({
         <span className="tips">"需要xx张图片！上传后点击图片可编辑"</span>
         <div className="edit_zone">
                <div className="left_wrapper" id="left_wrapper">
-               <span></span>
+               
                </div>
+               
                <div className="right_wrapper" id="right_wrapper">
-               <span></span>
+               
                </div>
+               <span className='left_span'></span>
+               <span className='right_span'></span>
         </div>
         <div className="count_wrapper">
               <div className="up"></div>
