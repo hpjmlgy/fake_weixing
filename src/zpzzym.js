@@ -15,7 +15,7 @@ import Zpzzym from './module/zpzzym/Zpzzym'
 // 	document.getElementById('mb_wrapper')
 // );
 ReactDOM.render(
-	<Zpzzym  mb={{original_width:"3638", original_height:"2469",target_height:205,template_name:'1',imgs:[{id:1,dual:[{id:1,img:[{id:'1',top:100,left:300,width:900,height:800},{id:'2',top:1000,left:300,width:900,height:800}]},{id:2,img:[{id:1,top:100,left:300,width:900,height:800},{id:2,top:1000,left:300,width:900,height:800}]}]},{id:2,dual:[{id:3,img:[{id:'1',top:100,left:300,width:900,height:800},{id:'2',top:1000,left:300,width:900,height:800}]},{id:4,img:[{id:1,top:100,left:300,width:900,height:800},{id:2,top:1200,left:300,width:900,height:800}]}]}]}}/>,
+	<Zpzzym  mb={{original_width:"3638", original_height:"2469",target_height:205,target_height_mbbj_x:335,target_height_mbbj_y:290,template_name:'宝贝成长日记 模板',imgs:[{id:1,dual:[{id:1,img:[{id:'1',top:100,left:300,width:900,height:800},{id:'2',top:1000,left:300,width:900,height:800}]},{id:2,img:[{id:1,top:100,left:300,width:900,height:800},{id:2,top:1000,left:300,width:900,height:800}]}]},{id:2,dual:[{id:3,img:[{id:'1',top:100,left:300,width:900,height:800},{id:'2',top:1000,left:300,width:900,height:800}]},{id:4,img:[{id:1,top:100,left:300,width:900,height:800},{id:2,top:1200,left:300,width:900,height:800}]}]}]}}/>,
 	document.getElementById('mb_wrapper')
 );
 

@@ -22,10 +22,7 @@
   overflow: hidden;
 }
 .template_wrapper .template div img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-position: center;
+  max-width: 100%;
 }
 .editor_wrapper {
   display: block;

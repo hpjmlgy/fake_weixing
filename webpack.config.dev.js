@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+// var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   // or devtool: 'eval' to debug issues with compiled output:
@@ -67,7 +68,7 @@ module.exports = {
       test: /\.css$/,
       exclude: /node_modules/,
       loader: 'style!css'
-        // loader: 'style-loader!css-loader'
+        // loader: ExtractTextPlugin.extract('style', 'css'),
     }, {
       test: /\.(png|jpg)$/,
       exclude: /node_modules/,
