@@ -1,7 +1,4 @@
 import React from 'react';
-// import Top_module from '../sszz/Top_module'
-// import Middle_module from './Middle_module'
-// import Bottom_module from '../sszz/Bottom_module'
 import Cropper from 'react-cropper';
 import './cropper.css';
 
@@ -13,10 +10,12 @@ injectTapEventPlugin();
 var current_clickedImg = []
 
 
+
 var Zpsbj = React.createClass({
     getInitialState: function() {
       return {
-        cropper_url: ''
+        cropper_url: '',
+        view_mode: 3
       }
     },
     componentDidMount: function() {
@@ -33,7 +32,9 @@ var Zpsbj = React.createClass({
         this.setState({
           cropper_url: url
         })
-        current_clickedImg.pop().attr('src', url);
+        var current_img = current_clickedImg.pop()
+        current_img.attr('src', url)
+        current_clickedImg.push(current_img)
       }
     },
     handle_imgTap: function(e) {
@@ -51,37 +52,51 @@ var Zpsbj = React.createClass({
       this.refs.cropper.reset()
     },
     _save_Modified_Img: function(e) {
+      var img_data = this.refs.cropper.getImageData();
+      var o = this;
+      if (current_clickedImg.length > 0) {
+        this.refs.cropper.getCroppedCanvas().toBlob(function(blob) {
+          var url = URL.createObjectURL(blob)
+          if (o.state.view_mode == 1) {
 
-      this.refs.cropper.getCroppedCanvas().toBlob(function(blob) {
-        console.log(blob);
-        var url = URL.createObjectURL(blob)
-        console.log(url);
-        $('.test').attr('src', url)
-        var formData = new FormData();
-        console.log(formData);
-      })
+          } else {
+
+            current_clickedImg.pop().attr('src', url)
+            var formData = new FormData();
+            //save or upload
+          }
+
+        })
+
+
+      }
+
     },
     _rotate: function(e) {
       this.refs.cropper.rotate(45)
     },
     _zoom_in: function(e) {
-      this.refs.cropper.zoom(0.2)
+      this.refs.cropper.zoom(0.1)
     },
     _zoom_out: function(e) {
-      this.refs.cropper.zoom(-0.2)
+      this.refs.cropper.zoom(-0.1)
     },
     render: function() {
       var o = this;
       // //原始大尺寸
       var original_width = this.props.original_width
       var original_height = this.props.original_height
-        //变换后尺寸
-        // var target_width = this.props.target_width
+
+
+      //变换后尺寸
+      // var target_width = this.props.target_width
       var target_height = this.props.target_height
         //实际以高变换为标准
       var scale = parseFloat(target_height / original_height).toFixed(5)
 
       var target_width = (scale * original_width).toFixed(2)
+
+
 
       var template_wrapper_style = {
         'width': target_width
@@ -95,13 +110,12 @@ var Zpsbj = React.createClass({
       var img_style = {
         //原始图像在模板中未经缩放的位置、大小信息
         display: 'block',
-        height: 1500,
-        width: 1500,
+        height: 1080,
+        width: 1920,
         position: 'absolute',
         top: 100,
         left: 1500,
-        overflow: "hidden",
-        backgroundSize: 'cover'
+        overflow: "hidden"
       }
 
       var display_none_style = {
@@ -113,7 +127,10 @@ var Zpsbj = React.createClass({
         <section>
              <section style={template_wrapper_style} className="template_wrapper">
                  <div style={template_style} className="template">
-                         <img style={img_style} onTouchTap={o.handle_imgTap} src="" alt=""/>
+                          <div style={img_style}> 
+                            <img  onTouchTap={o.handle_imgTap} src="" alt=""/>
+                          </div>
+                        
                  </div>
              </section>
              
@@ -124,7 +141,7 @@ var Zpsbj = React.createClass({
              <section className="editor_wrapper">
                    <section style={template_wrapper_style} className="template_wrapper">
                             <div style={template_style} className="template">
-                                <Cropper viewMode={3} dragMode='move' autoCropArea={1} modal={false} guides={false} highlight={false} cropBoxMovable={false} cropBoxResizable={false}toggleDragModeOnDblclick={false} style={img_style}  ref='cropper' src={this.state.cropper_url}  crop={this._crop}  />
+                                <Cropper viewMode={this.state.view_mode} dragMode='move' autoCropArea={1} modal={false} guides={false} highlight={false} cropBoxMovable={false} cropBoxResizable={false}toggleDragModeOnDblclick={false} style={img_style}  ref='cropper' src={this.state.cropper_url}  crop={this._crop}  />
                             </div>
                   </section>  
              </section>

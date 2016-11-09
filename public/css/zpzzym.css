@@ -75,28 +75,26 @@
   position: absolute;
   top: 0px;
   height: 205px;
+  width: 410px;
+}
+#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper .whole .mb_item .left_wrapper,
+#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper .whole .mb_item .right_wrapper {
+  display: block;
+  position: relative;
+  float: left;
+  height: 205px;
   width: 205px;
-  background-color: white;
+  box-sizing: border-box;
   border: 1px solid grey;
 }
-#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper .whole .mb_item img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 150px;
-  width: 150px;
-  background-color: grey;
-}
-#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper .whole .mb_item span {
-  display: block;
+#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper .whole .mb_item .left_wrapper span,
+#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper .whole .mb_item .right_wrapper span {
   position: absolute;
   font-size: 28px;
-  text-align: center;
-  bottom: -40px;
+  top: 205px;
 }
-#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper .whole div:nth-child(2n) img {
-  height: 150px;
-  width: 75px;
+#mb_wrapper .mb_item_wrapper .nav_wrapper .mb_control_wrapper .whole .mb_item .right_wrapper span {
+  right: 0px;
 }
 #mb_wrapper .mb_item_wrapper .edtior_wrapper {
   display: inline-block;
@@ -115,10 +113,33 @@
 }
 #mb_wrapper .mb_item_wrapper .edit_zone {
   display: block;
+  position: relative;
   width: 410px;
-  height: 410px;
+  height: 205px;
   margin: 0 auto;
-  border: 1px solid red;
+}
+#mb_wrapper .mb_item_wrapper .edit_zone .left_wrapper,
+#mb_wrapper .mb_item_wrapper .edit_zone .right_wrapper {
+  display: block;
+  position: relative;
+  float: left;
+  height: 205px;
+  width: 205px;
+  box-sizing: border-box;
+  border: 1px solid grey;
+}
+#mb_wrapper .mb_item_wrapper .edit_zone .left_wrapper img,
+#mb_wrapper .mb_item_wrapper .edit_zone .right_wrapper img {
+  background-color: grey;
+}
+#mb_wrapper .mb_item_wrapper .edit_zone .left_wrapper span,
+#mb_wrapper .mb_item_wrapper .edit_zone .right_wrapper span {
+  position: absolute;
+  font-size: 28px;
+  top: 205px;
+}
+#mb_wrapper .mb_item_wrapper .edit_zone .right_wrapper span {
+  right: 0px;
 }
 #mb_wrapper .mb_item_wrapper .current_num {
   display: block;

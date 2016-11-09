@@ -73,32 +73,28 @@
                             // height: 390px;
                             // width: 570px;
                             height: 205px;
-                            width: 205px;
-                            background-color: white;
-                            border: 1px solid grey;
-                            img {
-                                // display: block;
-                                // margin: 0 auto;
-                                // margin-top: 25px;
-                                position: absolute;
-                                top:0;
-                                left:0;
-                                height: 150px;
-                                width: 150px;
-                                background-color: grey;
-                            }
-                            span {
+                            width: 410px;
+                            // background-color: red;
+                            // border: 1px solid grey;
+                            .left_wrapper,
+                            .right_wrapper {
                                 display: block;
-                                position: absolute;
-                                font-size: 28px;
-                                text-align: center;
-                                bottom: -40px;
+                                position: relative;
+                                float: left;
+                                height: 205px;
+                                width: 205px;
+                                box-sizing: border-box;
+                                border: 1px solid grey;
+                                span {
+                                    position: absolute;
+                                    font-size: 28px;
+                                    top: 205px
+                                }
                             }
-                        }
-                        div:nth-child(2n) {
-                            img {
-                                height: 150px;
-                                width: 75px;
+                            .right_wrapper {
+                                span {
+                                    right: 0px;
+                                }
                             }
                         }
                     }
@@ -121,10 +117,34 @@
             }
             .edit_zone {
                 display: block;
+                position: relative;
                 width: 410px;
-                height: 410px;
+                height: 205px;
                 margin: 0 auto;
-                border: 1px solid red;
+                // border: 1px solid red;
+                .left_wrapper,
+                .right_wrapper {
+                    display: block;
+                    position: relative;
+                    float: left;
+                    height: 205px;
+                    width: 205px;
+                    box-sizing: border-box;
+                    border: 1px solid grey;
+                    img{
+                        background-color: grey;
+                    }
+                    span {
+                        position: absolute;
+                        font-size: 28px;
+                        top: 205px
+                    }
+                }
+                .right_wrapper {
+                    span {
+                        right: 0px;
+                    }
+                }
             }
             .current_num {
                 display: block;
