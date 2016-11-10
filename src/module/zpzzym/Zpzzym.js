@@ -12,7 +12,7 @@ injectTapEventPlugin();
 //全局变量
 var current_left_imgs = []
 var current_right_imgs = []
-var current_big_page = []
+  // var current_big_page = []
 var current_clickedImg = []
 
 var edit_zone_scalex = parseFloat((335 / 205).toFixed(5));
@@ -61,9 +61,14 @@ var Zpzzym = React.createClass({
       var scale = $(e.target).parent().data('scale')
       var ow = $(e.target).parent().data('ow')
       var oh = $(e.target).parent().data('oh')
-        //返回左侧的贴图
-      var Page_LEFT_ID = current_left_imgs[$(e.target).parent().data('id') - 1].id
 
+      var PAGE_ID = $(e.target).parent().data('id')
+        //返回左侧的贴图
+        //
+        //
+        //当前的实际相册页码
+      var Page_LEFT_ID = current_left_imgs[$(e.target).parent().data('id') - 1].id
+        //当前实际相册页码中的需要上传的图片
       var imgs_in_onePage_left = current_left_imgs[$(e.target).parent().data('id') - 1].img.map(function(elem) {
 
           // var top = elem.top * scale * edit_zone_scaley
@@ -85,8 +90,13 @@ var Zpzzym = React.createClass({
             'transform': 'scaleX(' + scale * edit_zone_scalex + ')' + 'scaleY(' + scale * edit_zone_scaley + ')'
               // 'zIndex': 100
           }
+          if (elem.src != '' || elem.src != undefined) {
+            return (<img src={elem.src} data-page={PAGE_ID} data-ow={ow} data-oh={oh}    data-top={elem.top} data-left={elem.left} data-width={elem.width} data-height={elem.height} onTouchTap={o.handle_imgTap_edit}   style={img_style} className={small_Page_ID}/>)
 
-          return (<img data-ow={ow} data-oh={oh}    data-top={elem.top} data-left={elem.left} data-width={elem.width} data-height={elem.height} onTouchTap={o.handle_imgTap_edit}   style={img_style} className={small_Page_ID}/>)
+          } else {
+            return (<img data-page={PAGE_ID} data-ow={ow} data-oh={oh}    data-top={elem.top} data-left={elem.left} data-width={elem.width} data-height={elem.height} onTouchTap={o.handle_imgTap_edit}   style={img_style} className={small_Page_ID}/>)
+
+          }
 
         })
         //返回右侧贴图
@@ -108,8 +118,13 @@ var Zpzzym = React.createClass({
           'transformOrigin': '0px 0px',
           'transform': 'scaleX(' + scale * edit_zone_scalex + ')' + 'scaleY(' + scale * edit_zone_scaley + ')'
         }
-        return (<img data-ow={ow} data-oh={oh}    data-top={elem.top} data-left={elem.left} data-width={elem.width} data-height={elem.height} onTouchTap={o.handle_imgTap_edit}   style={img_style} className={small_Page_ID}/>)
-          // /public/img/test_logo.jpg
+        if (elem.src != '' || elem.src != undefined) {
+          return (<img src={elem.src} data-page={PAGE_ID} data-ow={ow} data-oh={oh}    data-top={elem.top} data-left={elem.left} data-width={elem.width} data-height={elem.height} onTouchTap={o.handle_imgTap_edit}   style={img_style} className={small_Page_ID}/>)
+
+        } else {
+          return (<img data-page={PAGE_ID} data-ow={ow} data-oh={oh}    data-top={elem.top} data-left={elem.left} data-width={elem.width} data-height={elem.height} onTouchTap={o.handle_imgTap_edit}   style={img_style} className={small_Page_ID}/>)
+
+        } // /public/img/test_logo.jpg
       })
 
       var Left = React.createClass({
@@ -160,38 +175,39 @@ var Zpzzym = React.createClass({
 
     }
   },
-  handleLeftSwipe_mbbj: function(e) {
-    e.preventDefault();
-    var elem = $(e.currentTarget);
-    var current_item = elem.attr('data-id');
-    var num_item = elem.attr('data-num');
-    if (current_item < num_item) {
-      var mv_px = parseInt($(this.refs.whole_nav_mb).css('margin-left').slice(0, -2)) - (20 + 670) + "px"
-      $(this.refs.whole_nav_mb).css('margin-left', mv_px)
-    }
-
-  },
-  handleRightSwipe_mbbj: function(e) {
-    e.preventDefault();
-    var elem = $(e.currentTarget);
-    var current_item = elem.attr('data-id'); //大页编码
-    var num_item = elem.attr('data-num'); //大页数量
-    if (current_item > 1) {
-      var mv_px = parseInt($(this.refs.whole_nav_mb).css('margin-left').slice(0, -2)) + (20 + 670) + "px"
-      $(this.refs.whole_nav_mb).css('margin-left', mv_px)
-
-    }
-  },
   handleImg: function(e) {
     var target = e.target
     var files = target.files
     if (files[0] != undefined) {
       var url = URL.createObjectURL(files[0])
       var current_img = current_clickedImg.pop()
+
+      //大页号
+      //
+      var PAGE_ID = current_img.data('page')
       var current_img_className = current_img.attr('class')
-      current_img_className = '.' + current_img_className
-      for (var i = 0; i < $(current_img_className).length; i++) {
-        $($(current_img_className)[i]).attr('src', url)
+
+      var class_string = '.' + current_img_className
+
+      //实际页面号与页面内img编号
+
+      var id_array = current_img_className.split('_')
+        //实际页面号
+      var ACTUAL_PAGE_ID = id_array[0]
+        //页面内img编号
+      var IMG_ID = id_array[1]
+        //更新current_left_imgs或current_right_imgs内的图片信息
+        //
+      if (ACTUAL_PAGE_ID % 2 == 0) {
+        //偶数为右侧页面
+        current_right_imgs[(ACTUAL_PAGE_ID / 2) - 1].img[IMG_ID - 1].src = url
+      } else {
+        //奇数左侧页面
+        current_left_imgs[((parseInt(ACTUAL_PAGE_ID) + 1) / 2) - 1].img[IMG_ID - 1].src = url
+        console.log(current_left_imgs);
+      }
+      for (var i = 0; i < $(class_string).length; i++) {
+        $($(class_string)[i]).attr('src', url)
       };
       current_clickedImg.push(current_img)
     }
@@ -233,15 +249,6 @@ var Zpzzym = React.createClass({
       template.css('transform', 'scaleX(' + scale_x + ')' + 'scaleY(' + scale_y + ')')
       template.css('margin', '0 auto')
 
-      // draw(actual_height, actual_width, src)
-      // $('.cropper').css('height', 1000)
-      // $('.cropper').css('width', 1000)
-      // this.setState({
-      //   cropper_url: src,
-      //   cropper_height: actual_height,
-      //   cropper_width: actual_width
-      // })
-      // $('#img').attr('src', src)
       this.refs.cropper.replace(src)
       this.setState({
         cropper_height: actual_height,
@@ -274,6 +281,9 @@ var Zpzzym = React.createClass({
       var current_img = current_clickedImg.pop()
       var current_img_className = current_img.attr('class')
       current_img_className = '.' + current_img_className
+
+
+
       for (var i = 0; i < $(current_img_className).length; i++) {
         $($(current_img_className)[i]).attr('src', url)
       };
@@ -286,14 +296,11 @@ var Zpzzym = React.createClass({
       // this.refs.
   },
   delete_img: function(e) {
-
-    this.refs.cropper.replace('')
+    //返回默认图片
+    this.refs.cropper.replace("/public/img/1.jpg")
     var temp_save = current_clickedImg.pop()
+    $(temp_save).src = ''
     current_clickedImg.push(temp_save)
-    var class_string = "." + temp_save.attr('class')
-    for (var i = 0; i < $(class_string).length; i++) {
-      $($(class_string)[i]).attr('src', '');
-    };
   },
   save: function(e) {
     var img_data = this.refs.cropper.getImageData();
@@ -303,8 +310,29 @@ var Zpzzym = React.createClass({
         var url = URL.createObjectURL(blob)
         o.refs.cropper.replace(url)
           // current_clickedImg.pop()
-        var class_string = "." + current_clickedImg.pop().attr('class')
+        var current_img_className = current_clickedImg.pop().attr('class')
+        var class_string = "." + current_img_className
           //.attr('src', url)
+
+        var id_array = current_img_className.split('_')
+          //实际页面号
+        var ACTUAL_PAGE_ID = id_array[0]
+          //页面内img编号
+        var IMG_ID = id_array[1]
+          //更新current_left_imgs或current_right_imgs内的图片信息
+          //
+        if (ACTUAL_PAGE_ID % 2 == 0) {
+          //偶数为右侧页面
+          current_right_imgs[(ACTUAL_PAGE_ID / 2) - 1].img[IMG_ID - 1].src = url
+        } else {
+          //奇数左侧页面
+          current_left_imgs[((parseInt(ACTUAL_PAGE_ID) + 1) / 2) - 1].img[IMG_ID - 1].src = url
+          console.log(current_left_imgs);
+        }
+
+
+        //
+
         for (var i = 0; i < $(class_string).length; i++) {
           $($(class_string)[i]).attr('src', url);
         };
@@ -376,7 +404,7 @@ var Zpzzym = React.createClass({
             'height': height,
             // 'zIndex': 100
           }
-          return (<img  style={img_style} className={small_Page_ID}/>)
+          return (<img  style={img_style} data-page={Page_ID} className={small_Page_ID}/>)
 
         })
         //返回右侧贴图
@@ -393,12 +421,12 @@ var Zpzzym = React.createClass({
           'width': width,
           'height': height
         }
-        return (<img style={img_style}  className={small_Page_ID}/>)
+        return (<img style={img_style} data-page={Page_ID}  className={small_Page_ID}/>)
           // /public/img/test_logo.jpg
       })
       current_left_imgs.push(elem.dual[0])
       current_right_imgs.push(elem.dual[1])
-      current_big_page.push(Page_ID)
+        // current_big_page.push(Page_ID)
 
 
 
