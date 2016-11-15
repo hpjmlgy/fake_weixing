@@ -1,32 +1,21 @@
 var path = require('path');
 var webpack = require('webpack');
-// var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  // or devtool: 'eval' to debug issues with compiled output:
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'false',
   entry: {
-    common: [
-      // necessary for hot reloading with IE:
-      'eventsource-polyfill',
-      // listen to code updates emitted by hot middleware:
-      'webpack-hot-middleware/client',
-      // your code:
-    ],
     index: './src/index',
     mbck: './src/mbck',
     tg: './src/tg',
     tg_all: './src/tg_all',
     xzcp: './src/xzcp',
     zpscc: './src/zpscc',
-    zpzzym: './src/zpzzym', //8、10、11照片制作页面
+    zpzzym: './src/zpzzym', //8照片制作页面（未完）
     mbtz: './src/mbtz', //9模板调整
 
-    // zpsbj: './src/zpsbj', //11照片书编辑页面(测试页面)
-    xccyzz: './src/xccyzz', //13-16炫彩冲印制作
+    zpsbj: './src/zpsbj', //11照片书编辑页面
 
-
-    xccc: './src/xccc', //12炫彩尺寸选择
+    xccc: './src/xccc', //炫彩尺寸选择
     btcc: './src/btcc', //17摆台尺寸选择
     wlxq: './src/wlxq', //20物流详情
     sgtl: './src/sgtl', //21时光台历
@@ -47,19 +36,24 @@ module.exports = {
     ykjz: './src/ykjz', //46硬壳精装
     xccy: './src/xccy', //47-49炫彩冲印
     btbh: './src/btbh' //50摆台版画
-
-
   },
-
   output: {
     path: path.join(__dirname, 'dist'),
-    // filename: 'bundle.js',
     filename: "[name].bundle.js",
     publicPath: '/dist/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
+    })
   ],
   module: {
     loaders: [{
@@ -71,10 +65,6 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'style!css'
         // loader: ExtractTextPlugin.extract('style', 'css'),
-    }, {
-      test: /\.(png|jpg)$/,
-      exclude: /node_modules/,
-      loader: 'url-loader'
     }]
   }
 };

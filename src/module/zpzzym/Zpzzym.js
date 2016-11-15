@@ -19,6 +19,9 @@ var edit_zone_scalex = parseFloat((335 / 205).toFixed(5));
 var edit_zone_scaley = parseFloat((290 / 205).toFixed(5));
 var cropper = null
 
+var zoom_in_array = []
+var zoom_out_array = []
+
 function draw(height, width, url) {
   var url = url
   var cropper_style = {
@@ -35,12 +38,32 @@ function draw(height, width, url) {
     document.getElementById('template')
   )
 }
+
+function draw_processor(target, in_array, out_array) {
+  target.css('width', (0.5 + in_array.length * 0.1 - out_array.length * 0.1) * 100 + '%');
+
+}
+
+function img_processor(url, o) {
+  var image = new Image()
+  image.src = url
+  var pass = false
+  if (image.naturalWidth >= 0.9 * o.props.mb.demand_width && image.naturalHeight >= 0.9 * o.props.mb.demand_height) {
+    pass = true
+  }
+  return pass
+}
+
 var Zpzzym = React.createClass({
 
   componentDidMount: function() {
 
     // $('.mb_item_wrapper').css('display', 'none')
     $('.mbbj_wrapper').css('display', 'none')
+
+    this.setState({
+      reminder: "需要" + this.props.mb.num_imgs_needed + "张图片！上传后点击图片可编辑"
+    })
 
   },
 
@@ -178,39 +201,60 @@ var Zpzzym = React.createClass({
   handleImg: function(e) {
     var target = e.target
     var files = target.files
+
     if (files[0] != undefined) {
       var url = URL.createObjectURL(files[0])
-      var current_img = current_clickedImg.pop()
+      var o = this
+      var image = new Image()
+      image.src = url
+      image.onload = function() {
+        if (image.naturalWidth >= 0.9 * o.props.mb.demand_width && image.naturalHeight >= 0.9 * o.props.mb.demand_height) {
+          //pass
+          if (o.state.reminder == "图片尺寸过小") {
+            o.setState({
+              reminder: "需要" + o.props.mb.num_imgs_needed + "张图片！上传后点击图片可编辑"
+            })
+          }
+          var current_img = current_clickedImg.pop()
 
-      //大页号
-      //
-      var PAGE_ID = current_img.data('page')
-      var current_img_className = current_img.attr('class')
+          //大页号
+          //
+          var PAGE_ID = current_img.data('page')
+          var current_img_className = current_img.attr('class')
 
-      var class_string = '.' + current_img_className
+          var class_string = '.' + current_img_className
 
-      //实际页面号与页面内img编号
+          //实际页面号与页面内img编号
 
-      var id_array = current_img_className.split('_')
-        //实际页面号
-      var ACTUAL_PAGE_ID = id_array[0]
-        //页面内img编号
-      var IMG_ID = id_array[1]
-        //更新current_left_imgs或current_right_imgs内的图片信息
-        //
-      if (ACTUAL_PAGE_ID % 2 == 0) {
-        //偶数为右侧页面
-        current_right_imgs[(ACTUAL_PAGE_ID / 2) - 1].img[IMG_ID - 1].src = url
-      } else {
-        //奇数左侧页面
-        current_left_imgs[((parseInt(ACTUAL_PAGE_ID) + 1) / 2) - 1].img[IMG_ID - 1].src = url
-        console.log(current_left_imgs);
+          var id_array = current_img_className.split('_')
+            //实际页面号
+          var ACTUAL_PAGE_ID = id_array[0]
+            //页面内img编号
+          var IMG_ID = id_array[1]
+            //更新current_left_imgs或current_right_imgs内的图片信息
+            //
+          if (ACTUAL_PAGE_ID % 2 == 0) {
+            //偶数为右侧页面
+            current_right_imgs[(ACTUAL_PAGE_ID / 2) - 1].img[IMG_ID - 1].src = url
+          } else {
+            //奇数左侧页面
+            current_left_imgs[((parseInt(ACTUAL_PAGE_ID) + 1) / 2) - 1].img[IMG_ID - 1].src = url
+              // console.log(current_left_imgs);
+          }
+          for (var i = 0; i < $(class_string).length; i++) {
+            $($(class_string)[i]).attr('src', url)
+          };
+          current_clickedImg.push(current_img)
+          $('.progress>span').css('width', (parseInt(PAGE_ID) / o.props.mb.imgs.length) * 100 + '%')
+        } else {
+          o.setState({
+            reminder: '图片尺寸过小'
+          })
+        }
       }
-      for (var i = 0; i < $(class_string).length; i++) {
-        $($(class_string)[i]).attr('src', url)
-      };
-      current_clickedImg.push(current_img)
+
     }
+
   },
   handle_imgTap_edit: function(e) {
     //如果没有src触发选择图片
@@ -239,22 +283,24 @@ var Zpzzym = React.createClass({
       var template_height = 500;
       var scale_x = parseFloat(template_width / ow).toFixed(5)
       var scale_y = parseFloat(template_height / oh).toFixed(5)
+      var scale_actual_x = parseFloat(template_width / actual_width).toFixed(5)
+      var scale_actual_y = parseFloat(template_height / actual_height).toFixed(5)
       var template = $('.template')
-      $('.core_bj_wrapper').css('height', actual_height * scale_y)
-      $('.core_bj_wrapper').css('width', actual_width * scale_x)
+      $('.core_bj_wrapper').css('height', actual_height * scale_actual_y)
+      $('.core_bj_wrapper').css('width', actual_width * scale_actual_x)
 
-      template.css('height', actual_height)
-      template.css('width', actual_width)
+      template.css('height', actual_height * scale_actual_y)
+      template.css('width', actual_width * scale_actual_x)
       template.css('transform-origin', '0px 0px')
-      template.css('transform', 'scaleX(' + scale_x + ')' + 'scaleY(' + scale_y + ')')
+        // template.css('transform', 'scaleX(' + scale_x + ')' + 'scaleY(' + scale_y + ')')
       template.css('margin', '0 auto')
 
-      this.refs.cropper.replace(src)
-      this.setState({
-        cropper_height: actual_height,
-        cropper_width: actual_width,
-      }, () => {
 
+      this.setState({
+        cropper_height: actual_height * scale_actual_y,
+        cropper_width: actual_width * scale_actual_x,
+      }, () => {
+        this.refs.cropper.replace(src)
       })
 
 
@@ -264,10 +310,28 @@ var Zpzzym = React.createClass({
 
   },
   zoom_out: function(e) {
-    this.refs.cropper.zoom(-0.1)
+    if (zoom_out_array.length < 5) {
+      if (zoom_in_array.length > 0) {
+        zoom_in_array.pop()
+        this.refs.cropper.zoom(-0.1)
+      } else {
+        zoom_out_array.push(1)
+        this.refs.cropper.zoom(-0.1)
+      }
+    }
+    draw_processor($('.processor>span'), zoom_in_array, zoom_out_array)
   },
   zoom_in: function(e) {
-    this.refs.cropper.zoom(0.1)
+    if (zoom_in_array.length < 5) {
+      if (zoom_out_array.length > 0) {
+        zoom_out_array.pop()
+        this.refs.cropper.zoom(0.1)
+      } else {
+        zoom_in_array.push(1)
+        this.refs.cropper.zoom(0.1)
+      }
+    }
+    draw_processor($('.processor>span'), zoom_in_array, zoom_out_array)
   },
   rotate: function(e) {
     this.refs.cropper.rotate(15)
@@ -348,6 +412,7 @@ var Zpzzym = React.createClass({
 
     }
   },
+
   render: function() {
     var o = this;
 
@@ -466,6 +531,7 @@ var Zpzzym = React.createClass({
               <span className="title">预览</span>
               <button className="change_template">更换模板</button>
          </section>
+         <section className="progress"><span></span></section>
          <section className="nav_wrapper">
           <div className={"mb_control_wrapper"}>
                   <div className="whole" style={style_whole} ref="whole_nav">{video_items}</div>
@@ -474,7 +540,7 @@ var Zpzzym = React.createClass({
          </section>
 
      <section className="edtior_wrapper">
-        <span className="tips">"需要xx张图片！上传后点击图片可编辑"</span>
+        <span className="tips">{this.state.reminder}</span>
         <div className="edit_zone">
                <div className="left_wrapper" id="left_wrapper">
                
@@ -510,14 +576,14 @@ var Zpzzym = React.createClass({
           <section className="mbbj_top_wrapper"><span className="mb_name">{this.props.mb.template_name}</span></section>
              <section className="core_bj_wrapper">
                <div className="template" id="template">
-            <Cropper style={cropper_style} className="cropper" viewMode={3} dragMode='move' autoCropArea={1} modal={false} guides={false} highlight={false} cropBoxMovable={false} cropBoxResizable={false}toggleDragModeOnDblclick={false}  ref='cropper' src={''}  crop={this._crop}  />
+            <Cropper style={cropper_style} className="cropper" viewMode={3} dragMode='move' autoCropArea={1} modal={false} guides={false} highlight={false} cropBoxMovable={false} cropBoxResizable={false} toggleDragModeOnDblclick={false} zoomOnTouch={false} zoomOnWheel={false} ref='cropper' src={''}  crop={this._crop}  />
               <input className="img_changer" type="file"  accept="image/*" ref="img_changer" onChange={o.handle_change}/>
         
               </div>
              </section>
              <section className="mid_controller_wrapper">
                     <button onTouchTap={o.zoom_out} className='zoom_out'>-</button>
-                    <div className="processor"></div>
+                    <div className="processor"><span></span></div>
                     <button onTouchTap={o.zoom_in} className='zoom_in'>+</button>
              </section>
              <section className="bottom_controoler_wrapper">
@@ -526,6 +592,7 @@ var Zpzzym = React.createClass({
                 <button  onTouchTap={o.change_img}>换图</button>
                 <button onTouchTap={o.delete_img}>删除</button>
              </section>
+      
            </section>
 
 

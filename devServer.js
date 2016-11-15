@@ -5,7 +5,6 @@ var config = require('./webpack.config.dev');
 
 var app = express();
 var compiler = webpack(config);
-
 app.use(require('webpack-dev-middleware')(compiler, {
 	noInfo: true,
 	publicPath: config.output.publicPath
@@ -99,8 +98,8 @@ app.get('/xccy', function(req, res) {
 app.get('/btbh', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/btbh.html'));
 });
-app.get('/zpsbj', function(req, res) {
-	res.sendFile(path.join(__dirname, '/src/html/zpsbj.html'));
+app.get('/xccyzz', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/xccyzz.html'));
 });
 app.listen(3000, function(err) {
 	if (err) {

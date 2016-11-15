@@ -3,7 +3,6 @@
   display: block;
   position: relative;
   width: 750px;
-  height: 1000px;
   margin: 0 auto;
 }
 #mb_wrapper .mb_item_wrapper {
@@ -39,18 +38,34 @@
   width: 200px;
   height: 60px;
   font-size: 30px;
+  border: 0px;
   border-radius: 10px;
+  border: 1px solid #e52e04;
   line-height: 5px;
   color: #e52e04;
   text-align: center;
   background-color: white;
+}
+#mb_wrapper .mb_item_wrapper .progress {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: grey;
+}
+#mb_wrapper .mb_item_wrapper .progress span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background-color: red;
+  z-index: 100;
+  transition: width 0.5s ease 0s;
 }
 #mb_wrapper .mb_item_wrapper .nav_wrapper {
   display: inline-block;
   position: relative;
   width: 100%;
   background-color: white;
-  border-top: 2px solid grey;
   border-bottom: 1px solid grey;
   height: 303px;
 }
@@ -228,8 +243,8 @@
   border: 0px;
 }
 #mb_wrapper .mb_item_wrapper .deliver_wrapper .save {
-  border-right: 1px solid white;
   border: 0px;
+  border-right: 1px solid white;
 }
 .img_uploader {
   display: none;
@@ -293,7 +308,6 @@
   height: 100%;
 }
 .mbbj_wrapper .core_bj_wrapper .template div {
-  background-color: red;
   overflow: hidden;
 }
 .mbbj_wrapper .core_bj_wrapper .template div img {
@@ -320,7 +334,15 @@
 .mid_controller_wrapper .processor {
   height: 5px;
   width: 400px;
+  background-color: #333333;
+}
+.mid_controller_wrapper .processor span {
+  display: block;
+  width: 50%;
+  height: 100%;
   background-color: #e52e04;
+  z-index: 100;
+  transition: width 1s ease 0s;
 }
 .bottom_controoler_wrapper {
   display: flex;
@@ -341,4 +363,7 @@
   font-size: 28px;
   text-align: center;
   line-height: 54px;
+}
+.img_changer {
+  display: none;
 }

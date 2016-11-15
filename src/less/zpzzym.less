@@ -4,7 +4,7 @@
         position: relative;
         width: 750px;
         // height: 100%;
-        height: 1000px;
+        // height: 1000px;
         margin: 0 auto;
         .mb_item_wrapper {
             display: block;
@@ -38,12 +38,28 @@
                     width: 200px;
                     height: 60px;
                     font-size: 30px;
+                    border: 0px;
                     border-radius: 10px;
-                    // border: 1px solid #e52e04;
+                    border: 1px solid #e52e04;
                     line-height: 5px;
                     color: #e52e04;
                     text-align: center;
                     background-color: white;
+                }
+            }
+            .progress {
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                height: 2px;
+                background-color: grey;
+                span {
+                    display: block;
+                    height: 100%;
+                    width: 0%;
+                    background-color: red;
+                    z-index: 100;
+                    transition: width 0.5s ease 0s;
                 }
             }
             .nav_wrapper {
@@ -51,7 +67,6 @@
                 position: relative;
                 width: 100%;
                 background-color: white;
-                border-top: 2px solid grey;
                 border-bottom: 1px solid grey;
                 height: 303px;
                 .mb_control_wrapper {
@@ -234,8 +249,8 @@
                     border: 0px;
                 }
                 .save {
-                    border-right: 1px solid white;
                     border: 0px;
+                    border-right: 1px solid white;
                 }
             }
         }
@@ -304,10 +319,9 @@
                 width: 100%;
                 height: 100%;
                 div {
-                    background-color: red;
                     overflow: hidden;
                     img {
-                         max-width: 100%;
+                        max-width: 100%;
                     }
                 }
             }
@@ -334,7 +348,15 @@
         .processor {
             height: 5px;
             width: 400px;
-            background-color: #e52e04;
+            background-color: #333333;
+            span {
+                display: block;
+                width: 50%;
+                height: 100%;
+                background-color: #e52e04;
+                z-index: 100;
+                transition: width 1s ease 0s;
+            }
         }
     }
     
@@ -359,3 +381,8 @@
             // color: white;
         }
     }
+
+.img_changer{
+    display: none;
+}
+
