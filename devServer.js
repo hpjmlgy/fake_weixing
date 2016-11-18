@@ -101,6 +101,9 @@ app.get('/btbh', function(req, res) {
 app.get('/xccyzz', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/xccyzz.html'));
 });
+app.get('/ykjz1', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/ykjz1.html'));
+});
 app.listen(3000, function(err) {
 	if (err) {
 		console.log(err);

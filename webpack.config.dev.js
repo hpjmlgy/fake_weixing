@@ -45,6 +45,7 @@ module.exports = {
     dlzc: './src/dlzc', //43,44登录注册
     sszz: './src/sszz', //45时尚杂志介绍
     ykjz: './src/ykjz', //46硬壳精装
+    ykjz1: './src/ykjz1',
     xccy: './src/xccy', //47-49炫彩冲印
     btbh: './src/btbh' //50摆台版画
 

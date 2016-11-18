@@ -9,6 +9,7 @@ var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
 var urls = []
+var urls_origin = []
 var urls_data = [] //自行存储相关数据
 var count = 0
 var current_img = []
@@ -117,6 +118,7 @@ var Xccyzz = React.createClass({
       var current = current_img.pop()
       var changed_index = current.parent().parent().parent().attr('id');
       urls[changed_index] = url
+      urls_origin[changed_index] = url
       current.attr('src', url);
       current_img.push(current)
     }
@@ -132,6 +134,7 @@ var Xccyzz = React.createClass({
     var current = current_img.pop()
     var changed_index = current.parent().parent().parent().attr('id');
     urls[changed_index] = ""
+    urls_origin[changed_index] = ""
     current.attr('src', '/public/img/1.jpg');
     // current_img.push(current)
   },
@@ -154,12 +157,18 @@ var Xccyzz = React.createClass({
     var img_data = this.refs.cropper.getImageData();
     var o = this;
     if (current_img.length > 0) {
+      // console.log(this.refs.cropper.getCroppedCanvas().toBlob());
+      // console.log(this.refs.cropper.getCroppedCanvas().mstoBlob());
+
       this.refs.cropper.getCroppedCanvas().toBlob(function(blob) {
         var url = URL.createObjectURL(blob)
-        o.refs.cropper.replace(url)
+          // console.log(url);
+          // o.refs.cropper.replace(url)
 
 
         var current = current_img.pop()
+          // console.log(current.parent().parent().parent());
+
         var changed_index = current.parent().parent().parent().attr('id')
         urls[changed_index] = url
         current.attr('src', url);
@@ -260,6 +269,7 @@ var Xccyzz = React.createClass({
       if (files[i] != undefined) {
         var url = URL.createObjectURL(files[i])
         urls.push(url)
+        urls_origin.push(url)
       }
     };
     this.draw_imgs(urls)
@@ -278,6 +288,7 @@ var Xccyzz = React.createClass({
       if (image.naturalWidth >= 0.9 * o.props.demand_width && image.naturalHeight >= 0.9 * o.props.demand_height) {
         //pass
         urls.push(url)
+        urls_origin.push(url)
         var current_index = urls.length - 1
         var scale_x = parseFloat(320 / o.props.demand_width).toFixed(2)
         var scale_y = parseFloat(220 / o.props.demand_height).toFixed(2)
@@ -339,12 +350,16 @@ var Xccyzz = React.createClass({
     var target_wrapper = $(e.target).parent().parent().parent()
     var current_delete_index = target_wrapper.attr('id')
     urls[current_delete_index] = ''
+    urls_origin[current_delete_index] = ''
     target_wrapper.remove()
   },
   edit_img: function(e) {
     ///触发编辑页面弹出
     current_img.pop()
     current_img.push($(e.target))
+    var current = current_img.pop()
+    current_img.push(current)
+    var current_index = current.parent().parent().parent().attr('id');
 
     $('.cargo_wrapper').css('display', 'none')
     $('.mbbj_wrapper').css('display', 'block')
@@ -353,7 +368,7 @@ var Xccyzz = React.createClass({
 
     var ow = $(e.target).data('ow')
     var oh = $(e.target).data('oh')
-    var src = $(e.target).attr('src')
+    var src = urls_origin[current_index] //取原图
     var actual_width = this.props.demand_width
     var actual_height = this.props.demand_height
 
@@ -386,11 +401,13 @@ var Xccyzz = React.createClass({
 
     var current = current_img.pop()
     current_img.push(current)
+    var current_index = current.parent().parent().parent().attr('id');
+    var src = urls_origin[current_index] //取原图
 
 
     var ow = $(current).data('ow')
     var oh = $(current).data('oh')
-    var src = $(current).attr('src')
+
     var actual_width = this.props.demand_width
     var actual_height = this.props.demand_height
 
@@ -414,7 +431,7 @@ var Xccyzz = React.createClass({
       cropper_height: actual_height * scale_actual_y,
       cropper_width: actual_width * scale_actual_x,
     }, () => {
-      this.refs.cropper.replace(current.attr('src'))
+      this.refs.cropper.replace(src)
     })
 
   },
@@ -422,11 +439,13 @@ var Xccyzz = React.createClass({
 
     var current = current_img.pop()
     current_img.push(current)
+    var current_index = current.parent().parent().parent().attr('id');
+    var src = urls_origin[current_index] //取原图
 
 
     var ow = $(current).data('ow')
     var oh = $(current).data('oh')
-    var src = $(current).attr('src')
+
     var actual_width = this.props.demand_width
     var actual_height = this.props.demand_height
 
@@ -450,7 +469,7 @@ var Xccyzz = React.createClass({
       cropper_height: actual_width * scale_actual_x,
       cropper_width: actual_height * scale_actual_y,
     }, () => {
-      this.refs.cropper.replace(current.attr('src'))
+      this.refs.cropper.replace(src)
     })
 
 
