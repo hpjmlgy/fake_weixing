@@ -4,16 +4,13 @@
 <head>
     <title>index</title>
     <script src="/public/js/vendor/jquery-1.12.0.min.js"></script>
-    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <script src="/public/js/vendor/unslider-min.js"></script>
-    <!-- <script src="/public/js/vendor/semantic.min.js"></script> -->
     <script src="/public/js/vendor/prefixfree.min.js"></script>
     <link rel="stylesheet" href="/public/css/normalize.css">
     <link rel="stylesheet" href="/public/css/index.css">
-    <!-- <link rel="stylesheet" href="/public/css/semantic/semantic.min.css"> -->
     <link rel="stylesheet" href="/public/css/unslider/unslider.css">
     <link rel="stylesheet" href="/public/css/unslider/unslider-dots.css">
-    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+
 </head>
 
 <body>
@@ -41,39 +38,14 @@ $(document).ready(function() {
         arrows: false,
         speed: 1200
     });
-    $('.item').on('tap', function(event) {
-        event.preventDefault();
-        console.log("tap!")
-            /* Act on the event */
-    });
+    
 
-    //init video_nav
-    $('.whole').css('margin-left', "-600px")
-
-    $('.video_item').on('swipeleft', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        var elem = $(this);
-        var num_item = elem.attr('data-num');
-        var current_item = elem.attr('data-id');
-        var mValue = "-" + current_item * 600 + "px"
-        if (current_item < num_item)
-            $('.whole').css('margin-left', mValue)
-    })
-    $('.video_item').on('swiperight', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        var elem = $(this);
-        var current_item = elem.attr('data-id');
-        if (current_item > 1)
-            var nPX = parseInt($('.whole').css('margin-left').slice(0, -2)) + 600 + "px"
-        $('.whole').css('margin-left', nPX)
-    })
+ 
 
 
 
 })
 </script>
-<script src="/public/dist/index.bundle.js"></script>
+<script src="/dist/index.bundle.js"></script>
 
 </html>

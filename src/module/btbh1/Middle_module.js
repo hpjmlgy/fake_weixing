@@ -21,10 +21,12 @@ var Middle_module = React.createClass({
 
     return (
       <section className="Middle_module_wrapper">
-             <allModule.Btbh_type1_middle_module  />
+    
              <allModule.Btbh_type2_middle_module  />
              <allModule.Btbh_type3_middle_module  />
+               <allModule.Btbh_type4_middle_module  />
             {React.createElement(allModule[queue.pop()])}
+
 
       </section>
     )
@@ -33,4 +35,5 @@ var Middle_module = React.createClass({
 
 export default Middle_module;
 
-// <allModule.Btbh_type4_middle_module  />
+//        <allModule.Btbh_type1_middle_module  />
+//            <allModule.Btbh_type5_middle_module  />

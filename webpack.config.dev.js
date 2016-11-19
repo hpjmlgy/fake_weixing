@@ -13,8 +13,9 @@ module.exports = {
       'webpack-hot-middleware/client',
       // your code:
     ],
-    index: './src/index',
+
     mbck: './src/mbck',
+    index: './src/index',
     tg: './src/tg',
     tg_all: './src/tg_all',
     xzcp: './src/xzcp',
@@ -47,7 +48,9 @@ module.exports = {
     ykjz: './src/ykjz', //46硬壳精装
     ykjz1: './src/ykjz1',
     xccy: './src/xccy', //47-49炫彩冲印
-    btbh: './src/btbh' //50摆台版画
+    xccy1: './src/xccy1',
+    btbh: './src/btbh', //50摆台版画
+    btbh1: './src/btbh1'
 
 
   },

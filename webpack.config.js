@@ -10,12 +10,14 @@ module.exports = {
     tg_all: './src/tg_all',
     xzcp: './src/xzcp',
     zpscc: './src/zpscc',
-    zpzzym: './src/zpzzym', //8照片制作页面（未完）
+    zpzzym: './src/zpzzym', //8、10、11照片制作页面
     mbtz: './src/mbtz', //9模板调整
 
-    zpsbj: './src/zpsbj', //11照片书编辑页面
+    // zpsbj: './src/zpsbj', //11照片书编辑页面(测试页面)
+    xccyzz: './src/xccyzz', //13-16炫彩冲印制作
 
-    xccc: './src/xccc', //炫彩尺寸选择
+
+    xccc: './src/xccc', //12炫彩尺寸选择
     btcc: './src/btcc', //17摆台尺寸选择
     wlxq: './src/wlxq', //20物流详情
     sgtl: './src/sgtl', //21时光台历
@@ -34,8 +36,11 @@ module.exports = {
     dlzc: './src/dlzc', //43,44登录注册
     sszz: './src/sszz', //45时尚杂志介绍
     ykjz: './src/ykjz', //46硬壳精装
+    ykjz1: './src/ykjz1',
     xccy: './src/xccy', //47-49炫彩冲印
-    btbh: './src/btbh' //50摆台版画
+    xccy1: './src/xccy1',
+    btbh: './src/btbh', //50摆台版画
+    btbh1: './src/btbh1'
   },
   output: {
     path: path.join(__dirname, 'dist'),

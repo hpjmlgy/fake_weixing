@@ -14,7 +14,7 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 app.use('/public', express.static('public'));
 
-app.get('/', function(req, res) {
+app.get('/index', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/index.html'));
 });
 app.get('/mbck', function(req, res) {
@@ -95,8 +95,14 @@ app.get('/ykjz', function(req, res) {
 app.get('/xccy', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/xccy.html'));
 });
+app.get('/xccy1', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/xccy1.html'));
+});
 app.get('/btbh', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/btbh.html'));
+});
+app.get('/btbh1', function(req, res) {
+	res.sendFile(path.join(__dirname, '/src/html/btbh1.html'));
 });
 app.get('/xccyzz', function(req, res) {
 	res.sendFile(path.join(__dirname, '/src/html/xccyzz.html'));

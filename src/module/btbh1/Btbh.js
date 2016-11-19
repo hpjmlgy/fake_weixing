@@ -9,7 +9,7 @@ injectTapEventPlugin();
 //全局变量
 
 
-var Xccy = React.createClass({
+var Btbh = React.createClass({
 
     componentDidMount: function() {
 
@@ -32,7 +32,7 @@ var Xccy = React.createClass({
   })
   // 
 
-export default Xccy;
+export default Btbh;
 
 // <Middle_module/>
 // <Bottom_module desc={[{content:"5-7天制作周期"},{content:"工序复杂好产品值得等待"}]}/>

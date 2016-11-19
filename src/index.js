@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import ReactDOM from 'react-dom'
 import Slider from './module/index/Slider'
 import Top_ad from './module/index/Top_ad'
